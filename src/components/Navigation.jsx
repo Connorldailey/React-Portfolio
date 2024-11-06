@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navigation() {
     return (
@@ -19,25 +19,25 @@ export default function Navigation() {
                 {/* // Collapsible navbar links */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
-                        <li>
-                            <Link key={1} className="nav-link text-light me-3" to="/about">
+                        <li className="nav-item">
+                            <NavLink key={1} className={({ isActive }) => `nav-link me-3 ${isActive ? 'active' : 'text-light'}`} to="/">
                                 About Me
-                            </Link>
+                            </NavLink>
                         </li>
-                        <li>
-                            <Link key={2} className="nav-link text-light me-3" to="/portfolio">
+                        <li className="nav-item">
+                            <NavLink key={2} className={({ isActive }) => `nav-link me-3 ${isActive ? 'active' : 'text-light'}`} to="/portfolio">
                                 Portfolio  
-                            </Link>
+                            </NavLink>
                         </li>
-                        <li>
-                            <Link key={3} className="nav-link text-light me-3" to="/contact">
+                        <li className="nav-item">
+                            <NavLink key={3} className={({ isActive }) => `nav-link me-3 ${isActive ? 'active' : 'text-light'}`} to="/contact">
                                 Contact
-                            </Link>
+                            </NavLink>
                         </li>
-                        <li>
-                            <Link key={4} className="nav-link text-light" to="/resume">
+                        <li className="nav-item">
+                            <NavLink key={4} className={({ isActive }) => `nav-link me-3 ${isActive ? 'active' : 'text-light'}`} to="/resume">
                                 Resume
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
