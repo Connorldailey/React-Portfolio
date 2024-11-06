@@ -6,7 +6,7 @@ import './index.css';
 
 // Bring in pages the router will use
 import App from './App';
-import HomePage from './pages/HomePage';
+import AboutMe from './pages/AboutMe';
 
 // Define the accessible routes
 const router = createBrowserRouter([
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <AboutMe />,
       },
     ],
   },
