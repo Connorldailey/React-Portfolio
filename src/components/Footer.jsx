@@ -16,14 +16,14 @@ export default function Footer() {
         <footer className="p-3">
             <div className="container-fluid">
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-dark btn-lg" onClick={handleGitHubClick}>
-                        <i className="bi bi-github fs-2"></i>
+                    <button className="btn btn-lg mx-3" onClick={handleGitHubClick}>
+                        <i className="bi bi-github fs-1 text-light"></i>
                     </button>
-                    <button className="btn btn-dark btn-lg" onClick={handleLinkedInClick}>
-                        <i className="bi bi-linkedin fs-2"></i>
+                    <button className="btn btn-lg mx-3" onClick={handleLinkedInClick}>
+                        <i className="bi bi-linkedin fs-1 text-light"></i>
                     </button>
-                    <button className="btn btn-dark btn-lg" onClick={handleInstagramClick}>
-                        <i className="bi bi-instagram fs-2"></i>
+                    <button className="btn btn-lg mx-3" onClick={handleInstagramClick}>
+                        <i className="bi bi-instagram fs-1 text-light"></i>
                     </button>
                 </div>
             </div>
