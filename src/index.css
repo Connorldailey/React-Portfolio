@@ -1,7 +1,30 @@
+:root {
+  --dark-background: #023047;
+  --light-background: #8ecae6;
+  --important-text: #ffb703;
+  --border-color: #fb8500;
+}
+
+header, footer {
+  background-color: var(--dark-background);
+}
+
+.page-section {
+  border: 2px solid var(--dark-background);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.page-section:hover {
+  border-color: var(--border-color);
+  transform: scale(1.001);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+
 .nav-item .nav-link.active {
   font-weight: bold;
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+  color: var(--important-text);
+  border-bottom: 2px solid var(--important-text);
 }
 
 .profile-image {

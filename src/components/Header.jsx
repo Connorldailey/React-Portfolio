@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 export default function Header() {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+            <nav className="navbar navbar-expand-lg navbar-dark p-4">
                 <div className="container-fluid">
                     <h1 className="text-light">Connor Dailey</h1>
                     {/* Toggle Button for Small Screens */}

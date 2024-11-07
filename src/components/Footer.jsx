@@ -13,7 +13,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-dark p-3">
+        <footer className="p-3">
             <div className="container-fluid">
                 <div className="d-flex justify-content-center">
                     <button className="btn btn-dark btn-lg" onClick={handleGitHubClick}>
