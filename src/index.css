@@ -9,3 +9,9 @@
   height: 150px;
   object-fit: cover;
 }
+
+@media screen and (min-width: 992px) {
+  .nav-item {
+    font-size: 1.2rem;
+  }
+}
