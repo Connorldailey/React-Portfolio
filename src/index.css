@@ -3,3 +3,9 @@
   color: #ffcc00;
   border-bottom: 2px solid #ffcc00;
 }
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
