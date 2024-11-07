@@ -1,4 +1,5 @@
 import myImage from '../assets/images/portfolioImage.jpeg';
+import { Link } from 'react-router-dom';
 
 export default function AboutMe() {
     return (
@@ -12,7 +13,7 @@ export default function AboutMe() {
                 />
             </div>
             {/* // Introduction section */}
-            <div className="border-bottom">
+            <div className="border-bottom p-3">
                 <p>
                     <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a full-stack web developer with a passion for creating meaningful, user-centered web applications. 
                     With a solid foundation in mathematics and a keen interest in problem-solving, I am dedicated to building solutions that bridge 
@@ -78,6 +79,35 @@ export default function AboutMe() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="border-bottom pt-3">
+                <h3>Hobbies and Interests</h3>
+                <div className="p-3">
+                    <p>
+                        Outside of coding, I have a variety of interests that keep me grounded and inspired. 
+                        I enjoy playing guitar, whether I'm learning a new song or just unwinding with a few chords. 
+                        Archery is another passion of mine—it’s a practice that combines focus, patience, and precision, 
+                        qualities I bring into my work as well.
+                    </p>
+                    <p>
+                        I'm an avid nature explorer who loves immersing myself in the beauty of the outdoors—whether it's hiking, 
+                        kayaking, or fishing, I’m always ready for the next adventure.
+                        At home, I’m dedicated to caring for my growing collection of potted plants, which adds a bit of nature 
+                        to my everyday environment. Most importantly, I cherish quality time with friends and family, as they 
+                        keep me balanced and remind me of what truly matters.
+                    </p>
+                </div>
+            </div>
+            <div className="border-bottom pt-3">
+                <h3 className="mb-0 ">Call to Action</h3>
+                <div className="p-3">
+                    <p>
+                        <strong>Looking to Collaborate? </strong>
+                        I’m always excited about potential collaborations and new opportunities to contribute to impactful projects. 
+                        If you’re interested in working together, let’s connect! For inquiries, feedback, or just to say hello, 
+                        feel free to reach out through my <Link to="/contact">Contact</Link> page. I’d love to hear from you!
+                    </p>
                 </div>
             </div>
         </section>
