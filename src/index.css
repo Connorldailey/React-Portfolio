@@ -5,6 +5,10 @@
   --border-color: #fb8500;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 header, footer {
   background-color: var(--dark-background);
 }
@@ -13,6 +17,31 @@ header, footer {
   font-weight: bold;
   color: var(--important-text);
   border-bottom: 2px solid var(--important-text);
+}
+
+.footer-icon:hover {
+  animation: shake 0.5s ease-in-out;
+  border: 2px solid white;
+  box-shadow: 
+    rgba(142, 202, 230, 0.4) 5px 5px, 
+    rgba(142, 202, 230, 0.3) 10px 10px, 
+    rgba(142, 202, 230, 0.2) 15px 15px;
+
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-3px);
+    }
+    50% {
+      transform: translateX(3px);
+    }
+    75% {
+      transform: translateX(-3px);
+    }
+  }
 }
 
 .profile-image {
