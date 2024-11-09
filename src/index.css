@@ -27,27 +27,26 @@ header, footer {
   color: var(--important-text);
 }
 
+.footer-icon {
+  transition: transform 0.3s ease;
+}
+
 .footer-icon:hover {
-  animation: shake 0.5s ease-in-out;
-  border: 2px solid white;
-  box-shadow: 
-    rgba(142, 202, 230, 0.4) 5px 5px, 
-    rgba(142, 202, 230, 0.3) 10px 10px;
+  animation: shake 0.5s ease-in-out forwards;
+}
 
-
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-3px);
-    }
-    50% {
-      transform: translateX(3px);
-    }
-    75% {
-      transform: translateX(-3px);
-    }
+@keyframes shake {
+  0%, 100% {
+    transform: scale(1.2) translateX(0);
+  }
+  25% {
+    transform: scale(1.2) translateX(-3px);
+  }
+  50% {
+    transform: scale(1.2) translateX(3px);
+  }
+  75% {
+    transform: scale(1.2) translateX(-3px);
   }
 }
 
