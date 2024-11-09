@@ -5,22 +5,30 @@ export default function Navigation() {
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item ms-lg-3">
                 <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} to="/">
-                    About Me
+                    <div className="nav-hover">
+                        About Me
+                    </div>
                 </NavLink>
             </li>
             <li className="nav-item ms-lg-3">
                 <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} to="/portfolio">
-                    Portfolio
+                    <div className="nav-hover">
+                        Portfolio
+                    </div>
                 </NavLink>
             </li>
             <li className="nav-item ms-lg-3">
                 <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} to="/contact">
-                    Contact
+                    <div className="nav-hover">
+                        Contact
+                    </div>
                 </NavLink>
             </li>
             <li className="nav-item ms-lg-3">
                 <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} to="/resume">
-                    Resume
+                    <div className="nav-hover">
+                        Resume
+                    </div>
                 </NavLink>
             </li>
         </ul>
