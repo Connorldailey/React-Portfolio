@@ -123,8 +123,3 @@ export default function AboutMe() {
         </section>
     );
 }
-<div className="d-flex">
-                    <div classsName="card">
-                        
-                    </div>
-                </div>
