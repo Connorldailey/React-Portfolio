@@ -5,25 +5,35 @@ export default function AboutMe() {
     return (
         <section>
             <h2 className="mb-0">About Me</h2>
-            <div className="my-3">
-                <img 
-                    src={myImage} 
-                    className="profile-image rounded-circle img-thumbnail" 
-                    alt="Self portrait"
-                />
-            </div>
-            {/* // Introduction section */}
-            <div className="border-bottom p-3">
-                <p>
-                    <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a full-stack web developer with a passion for creating meaningful, user-centered web applications. 
-                    With a solid foundation in mathematics and a keen interest in problem-solving, I am dedicated to building solutions that bridge 
-                    the gap between technology and real-world needs. Currently, I’m honing my skills in a Full Stack Web Development Bootcamp at 
-                    The Ohio State University, gaining hands-on experience with technologies like HTML5, CSS3, JavaScript ES6+, React, Node.js, and TypeScript.
-                </p>
-                <p>
-                    Beyond coding, I’m an avid learner and problem solver who thrives in collaborative environments. I’m constantly seeking new challenges that 
-                    push me to grow, whether it’s exploring sustainable technologies, diving into data analysis, or improving user experiences.
-                </p>
+            <div className="border-bottom">
+                <div className="container">
+                    <div className="row">
+                        <div className="col d-flex align-items-center">
+                            <div className="my-3">
+                                <img 
+                                    src={myImage} 
+                                    className="profile-image rounded-circle img-thumbnail" 
+                                    alt="Self portrait"
+                                />
+                            </div>
+                        </div>
+                        <div className="col-lg-10">
+                            {/* // Introduction section */}
+                            <div className="">
+                                <p>
+                                    <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a full-stack web developer with a passion for creating meaningful, user-centered web applications. 
+                                    With a solid foundation in mathematics and a keen interest in problem-solving, I am dedicated to building solutions that bridge 
+                                    the gap between technology and real-world needs. Currently, I’m honing my skills in a Full Stack Web Development Bootcamp at 
+                                    The Ohio State University, gaining hands-on experience with technologies like HTML5, CSS3, JavaScript ES6+, React, Node.js, and TypeScript.
+                                </p>
+                                <p>
+                                    Beyond coding, I’m an avid learner and problem solver who thrives in collaborative environments. I’m constantly seeking new challenges that 
+                                    push me to grow, whether it’s exploring sustainable technologies, diving into data analysis, or improving user experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             {/* // Core skills section */}
             <div className="border-bottom pt-3">
