@@ -1,7 +1,31 @@
 import myImage from '../assets/images/portfolioImage.jpeg';
 import { Link } from 'react-router-dom';
 
+import Skill from '../components/Skill.jsx';
+
 export default function AboutMe() {
+    const skills = [
+        {
+            title: "Front-End Development",
+            icon: "bi-filetype-jsx",
+            description: "Expert in creating responsive, user-friendly interfaces using HTML5, CSS3, JavaScript ES6+, and React.",
+        },
+        {
+            title: "Back-End Development",
+            icon: "bi-database",
+            description: "Proficient in server-side programming, building APIs, and working with databases using Node.js, Express, and SQL.",
+        },
+        {
+            title: "Version Control",
+            icon: "bi-file-earmark-diff",
+            description: "Experienced in using Git and GitHub for version control, managing code changes, collaborating with teams, and maintaining project integrity.",
+        },
+        {
+            title: "Adaptability & Growth Mindset",
+            icon: "bi-graph-up-arrow",
+            description: "Always learning and adapting to emerging technologies, including TypeScript, Bootstrap, and modern JavaScript frameworks.",
+        },
+    ];
     return (
         <section>
             <h2 className="mb-0">About Me</h2>
@@ -40,54 +64,13 @@ export default function AboutMe() {
                 <h3 className="mb-3">Core Skills</h3>
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                        {/* // Front-end Development */}
-                        <div className="col mb-4">
-                            <div className="card h-100 skills-card">
-                                <div className="card-body">
-                                    <h5 className="card-title text-center">Front-End Development</h5>
-                                    <div className="d-flex flex-column justify-content-between align-items-center">
-                                        <i className="bi bi-filetype-jsx fs-1 skills-icon"></i>
-                                        <p className="text-center mb-0">Expert in creating responsive, user-friendly interfaces using HTML5, CSS3, JavaScript ES6+, and React.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* // Back-end development */}
-                        <div className="col mb-4">
-                            <div className="card h-100 skills-card">
-                                <div className="card-body">
-                                    <h5 className="card-title text-center">Back-End Development</h5>
-                                    <div className="d-flex flex-column justify-content-between align-items-center">
-                                        <i className="bi bi-database fs-1 skills-icon"></i>
-                                        <p className="text-center mb-0">Proficient in server-side programming, building APIs, and working with databases using Node.js, Express, and SQL.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* // Version Control */}
-                        <div className="col mb-4">
-                            <div className="card h-100 skills-card">
-                                <div className="card-body">
-                                    <h5 className="card-title text-center">Version Control</h5>
-                                    <div className="d-flex flex-column justify-content-between align-items-center">
-                                        <i className="bi bi-file-earmark-diff fs-1 skills-icon"></i>
-                                        <p className="text-center mb-0">Experienced in using Git and GitHub for version control, managing code changes, collaborating with teams, and maintaining project integrity.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* // Adaptability & Growth Mindset */}
-                        <div className="col mb-4">
-                            <div className="card h-100 skills-card">
-                                <div className="card-body">
-                                    <h5 className="card-title text-center">Adaptability & Growth Mindset</h5>
-                                    <div className="d-flex flex-column justify-content-between align-items-center">
-                                        <i className="bi bi-graph-up-arrow fs-1 skills-icon"></i>
-                                        <p className="text-center mb-0">Always learning and adapting to emerging technologies, including TypeScript, Bootstrap, and modern JavaScript frameworks.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {skills.map((skill) => (
+                            <Skill 
+                                title={skill.title}
+                                icon={skill.icon}
+                                description={skill.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
