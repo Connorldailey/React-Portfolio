@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Contact() {
-
+    // State variables to store form input values
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    // Function to handle changes to input fields
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-
+        // Update the corresponding state based on the input field name
         if (name === "nameInput") {
             setName(value);
         } else if (name === "emailInput") {
@@ -19,24 +19,24 @@ export default function Contact() {
         }
     }
 
+    // Function to handle form submission
     const handleFormSubmit = (e) => {
         e.preventDefault();
-
+        // Show an alert with the entered form data (for testing purposes)
         alert(`${name}, ${email}, ${message}`);
-        
+        // Reset form fields after submission
         setName('');
         setEmail('');
         setMessage('');
     };
 
-    const handleLinkedInClick = () => {
-        window.open("https://www.linkedin.com/in/connor-dailey-7a129b2b2/", "_blank");
-    };
-
     return (
         <section>
+            {/* Contact form section */}
             <h2>Contact</h2>
+            {/* Form for collecting user input */}
             <form className="form" onSubmit={handleFormSubmit}>
+                {/* Name Input Field */}
                 <div className="mb-3">
                     <div className="col-lg-6 col-md-8 col-12">
                         <label htmlFor="name-input" className="form-label">Name</label>
@@ -51,6 +51,7 @@ export default function Contact() {
                         />
                     </div>
                 </div>
+                {/* Email Input Field */}
                 <div className="mb-3">
                     <div className="col-lg-6 col-md-8 col-12">
                         <label htmlFor="email-input" className="form-label">Email Address</label>
@@ -65,6 +66,7 @@ export default function Contact() {
                         />
                     </div>
                 </div>
+                {/* Message Input Field */}
                 <div className="mb-3">
                     <div className="col-lg-6 col-md-8 col-12">
                         <label htmlFor="message-input" className="form-label">Message</label>
@@ -80,10 +82,12 @@ export default function Contact() {
                         />
                     </div>
                 </div>
+                {/* Submit Button */}
                 <button type="submit" className="btn btn-primary">
                     Submit
                 </button>
             </form>
+            {/* Note to inform users that the contact form is under development */}
             <div className="pt-3">
                 <p>
                     Note: The contact form is currently under development and is not yet functional. 
