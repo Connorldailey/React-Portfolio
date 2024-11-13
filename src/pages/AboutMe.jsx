@@ -64,8 +64,9 @@ export default function AboutMe() {
                 <h3 className="mb-3">Core Skills</h3>
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                        {skills.map((skill) => (
+                        {skills.map((skill, index) => (
                             <Skill 
+                                key={index}
                                 title={skill.title}
                                 icon={skill.icon}
                                 description={skill.description}
