@@ -71,7 +71,7 @@ export default function AboutMe() {
                                     <h5 className="card-title text-center">Version Control</h5>
                                     <div className="d-flex flex-column justify-content-between align-items-center">
                                         <i className="bi bi-file-earmark-diff fs-1 skills-icon"></i>
-                                        <p className="text-center mb-0">Proficient in server-side programming, building APIs, and working with databases using Node.js, Express, and SQL.</p>
+                                        <p className="text-center mb-0">Experienced in using Git and GitHub for version control, managing code changes, collaborating with teams, and maintaining project integrity.</p>
                                     </div>
                                 </div>
                             </div>

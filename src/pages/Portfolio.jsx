@@ -2,6 +2,7 @@ import Project from "../components/Project";
 
 import trivialCodeImg from "../assets/images/trivialCode.png";
 import weatherDashboardImg from "../assets/images/weatherDashboard.png";
+import defaultPageImg from "../assets/images/defaultPage.jpeg";
 
 export default function Portfolio() {
     // Define an array of project data
@@ -21,32 +22,32 @@ export default function Portfolio() {
             deployedLink: 'https://module9-challenge-b2vj.onrender.com',
         },
         {
-            title: 'Weather Dashboard',
-            image: weatherDashboardImg,
-            description: 'A simple 5 day weather dashboard.',
-            githubLink: 'https://github.com/Connorldailey/Weather-Dashboard',
-            deployedLink: 'https://module9-challenge-b2vj.onrender.com',
+            title: 'Project Coming Soon',
+            image: defaultPageImg,
+            description: 'Exciting new projects are coming soon. Stay tuned for updates!',
+            githubLink: '#',
+            deployedLink: '#',
         },
         {
-            title: 'Weather Dashboard',
-            image: weatherDashboardImg,
-            description: 'A simple 5 day weather dashboard.',
-            githubLink: 'https://github.com/Connorldailey/Weather-Dashboard',
-            deployedLink: 'https://module9-challenge-b2vj.onrender.com',
+            title: 'Project Coming Soon',
+            image: defaultPageImg,
+            description: 'Exciting new projects are coming soon. Stay tuned for updates!',
+            githubLink: '#',
+            deployedLink: '#',
         },
         {
-            title: 'Weather Dashboard',
-            image: weatherDashboardImg,
-            description: 'A simple 5 day weather dashboard.',
-            githubLink: 'https://github.com/Connorldailey/Weather-Dashboard',
-            deployedLink: 'https://module9-challenge-b2vj.onrender.com',
+            title: 'Project Coming Soon',
+            image: defaultPageImg,
+            description: 'Exciting new projects are coming soon. Stay tuned for updates!',
+            githubLink: '#',
+            deployedLink: '#',
         },
         {
-            title: 'Weather Dashboard',
-            image: weatherDashboardImg,
-            description: 'A simple 5 day weather dashboard.',
-            githubLink: 'https://github.com/Connorldailey/Weather-Dashboard',
-            deployedLink: 'https://module9-challenge-b2vj.onrender.com',
+            title: 'Project Coming Soon',
+            image: defaultPageImg,
+            description: 'Exciting new projects are coming soon. Stay tuned for updates!',
+            githubLink: '#',
+            deployedLink: '#',
         },
     ];
 
