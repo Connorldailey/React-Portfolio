@@ -1,11 +1,12 @@
 import Project from "../components/Project";
 
+// Import project images
 import trivialCodeImg from "../assets/images/trivialCode.png";
 import weatherDashboardImg from "../assets/images/weatherDashboard.png";
 import defaultPageImg from "../assets/images/defaultPage.jpeg";
 
 export default function Portfolio() {
-    // Define an array of project data
+    // Define an array of project data to display in the portfolio
     const projects = [
         {
             title: 'Trivial Code',
@@ -53,9 +54,12 @@ export default function Portfolio() {
 
     return (
         <section>
+            {/* Portfolio section header */}
             <h2 className="mb-4">Portfolio</h2>
+            {/* Container for the project cards */}
             <div className="container">
                 <div className="row">
+                    {/* Map over the projects array to render each project */}
                     {projects.map((project, index) => (
                         <Project
                             key={index}
