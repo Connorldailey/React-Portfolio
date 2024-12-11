@@ -3,6 +3,7 @@ import Project from "../components/Project";
 // Import project images
 import trivialCodeImg from "../assets/images/trivialCode.png";
 import weatherDashboardImg from "../assets/images/weatherDashboard.png";
+import culinaryCompass from "../assets/images/culinaryCompass.png";
 import defaultPageImg from "../assets/images/defaultPage.jpeg";
 
 export default function Portfolio() {
@@ -23,11 +24,11 @@ export default function Portfolio() {
             deployedLink: 'https://module9-challenge-b2vj.onrender.com',
         },
         {
-            title: 'Project Coming Soon',
-            image: defaultPageImg,
-            description: 'Exciting new projects are coming soon. Stay tuned for updates!',
-            githubLink: '#',
-            deployedLink: '#',
+            title: 'Culinary Compass',
+            image: culinaryCompass,
+            description: 'Explore meal ideas, access cooking instructions, and ask questions from an AI assistant.',
+            githubLink: 'https://github.com/Connorldailey/Culinary-Compass.git',
+            deployedLink: 'https://culinary-compass-8j0q.onrender.com/',
         },
         {
             title: 'Project Coming Soon',
