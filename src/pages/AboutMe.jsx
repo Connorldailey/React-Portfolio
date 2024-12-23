@@ -47,14 +47,15 @@ export default function AboutMe() {
                         {/* Introduction Text */}
                         <div className="col-lg-10">
                             <p>
-                                <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a full-stack web developer with a passion for creating meaningful, user-centered web applications. 
-                                With a solid foundation in mathematics and a keen interest in problem-solving, I am dedicated to building solutions that bridge 
-                                the gap between technology and real-world needs. Currently, I’m honing my skills in a Full Stack Web Development Bootcamp at 
-                                The Ohio State University, gaining hands-on experience with technologies like HTML5, CSS3, JavaScript ES6+, React, Node.js, and TypeScript.
+                                <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a Full-Stack Web Developer with a Bachelor’s in Mathematics 
+                                and a certificate in Full Stack Web Development from The Ohio State University. I love tackling complex challenges by 
+                                building practical, user-focused solutions with HTML, CSS, JavaScript, React, Node.js, and TypeScript. Whether it’s 
+                                optimizing a front-end interface or crafting a robust back-end, I’m driven by continuous learning and the thrill of 
+                                transforming big ideas into impactful applications. When I’m not coding, you’ll find me exploring ways to address 
+                                real-world problems—from streamlining business workflows to envisioning more sustainable tech solutions.
                             </p>
                             <p>
-                                Beyond coding, I’m an avid learner and problem solver who thrives in collaborative environments. I’m constantly seeking new challenges that 
-                                push me to grow, whether it’s exploring sustainable technologies, diving into data analysis, or improving user experiences.
+                                Ready to build something extraordinary together? Let’s connect and create innovative products that move businesses—and the world—forward.
                             </p>
                         </div>
                     </div>
