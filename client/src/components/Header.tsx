@@ -1,6 +1,7 @@
+import React from 'react';
 import Navigation from './Navigation';
 
-export default function Header() {
+const Header: React.FC = () => {
     return (
         <header>
             {/* Navigation bar */}
@@ -30,4 +31,6 @@ export default function Header() {
             </nav>
         </header>
     );
-}
+};
+
+export default Header;

@@ -1,4 +1,15 @@
-export default function Project({ title, image, description, githubLink, deployedLink }) {
+import React from 'react';
+
+// Define the prop types for the Project component
+interface ProjectProps {
+    title: string;
+    image: string;
+    description: string;
+    githubLink: string;
+    deployedLink: string;
+}
+
+const Project: React.FC<ProjectProps> = ({ title, image, description, githubLink, deployedLink }) => {
     return (
         <div className="col-lg-4 col-md-6 mb-4">
             {/* Card component to display project information */}
@@ -34,3 +45,5 @@ export default function Project({ title, image, description, githubLink, deploye
         </div>
     )
 }
+
+export default Project;
