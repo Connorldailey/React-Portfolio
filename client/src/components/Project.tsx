@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({ title, image, description, githubLink
                 {/* Card body */}
                 <div className="card-body p-0">
                     {/* Project image */}
-                    <img src={image} alt={title} className="img-fluid"/>
+                    <img src={image} alt={title} className="img-fluid" loading="lazy"/>
                     {/* Card content area */}
                     <div className="p-3">
                         <div className="border-bottom pb-3">
