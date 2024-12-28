@@ -44,7 +44,7 @@ If the application does not open automatically, open your browser and navigate t
 
 ## Usage 
 
-To use the application, visit the [live site](https://connordailey-devportfolio.netlify.app).
+To use the application, visit the [live site](https://connor-dailey-portfolio.onrender.com).
 
 ### How to get started:
 
