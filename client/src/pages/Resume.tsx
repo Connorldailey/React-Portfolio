@@ -4,7 +4,7 @@ export default function Resume() {
             {/* Section title */}
             <h2>Resume</h2>
             {/* Link to download the resume PDF */}
-            <p>Download <a href="/ConnorDailey-Resume.pdf" download="ConnorDailey_Resume">my resume</a>.</p>
+            <p>Download <a href="/ConnorDailey-Resume(MASTER).pdf" download="ConnorDailey_Resume">my resume</a>.</p>
             {/* Front-End Proficiencies List */}
             <div>
                 <h3>Front-End Proficiencies:</h3>
