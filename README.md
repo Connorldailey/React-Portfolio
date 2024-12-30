@@ -4,11 +4,11 @@
 
 ## Description 
 
-This project is a personal portfolio website developed using React and Vite. It serves as a platform to showcase my web development projects, technical skills, and professional background. The website is fully responsive, ensuring optimal viewing and interaction across a wide range of devices.
+This project is a personal portfolio website developed using the MERN stack (MongoDB, Express.js, React, Node.js) and Vite. It serves as a platform to showcase my web development projects, technical skills, and professional background. The website is fully responsive, ensuring optimal viewing and interaction across a wide range of devices.
 
-The site features smooth animations and interactive elements to create an engaging and user-friendly experience. It includes dedicated sections for an About Me overview, a portfolio showcasing projects with links to the deployed applications and GitHub repositories, a resume download option, and a contact form for easy communication.
+The site features smooth animations and interactive elements to create an engaging and user-friendly experience. It includes dedicated sections for an About Me overview, a portfolio showcasing projects with links to the deployed applications and GitHub repositories, a resume download option, and a fully functional contact form powered by the backend.
 
-The application is deployed on Netlify, providing seamless deployment and efficient updates to ensure the site is always up-to-date with the latest improvements.
+The application is deployed on Render, providing seamless deployment and efficient updates to ensure the site is always up-to-date with the latest improvements.
 
 ## Table of Contents 
 
@@ -58,7 +58,7 @@ To use the application, visit the [live site](https://connor-dailey-portfolio.on
 
 3. **Contact Me**:
 
-    The Contact form allows you to reach out directly (currently under development).
+    The Contact form allows you to reach out directly. Messages are processed through the backend and stored in the database, ensuring reliable communication.
 
 4. **View My Resume**:
 
