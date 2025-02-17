@@ -1,6 +1,5 @@
 :root {
-  --dark-background: #023047;
-  --light-background: #8ecae6;
+  --dark-background: black;
   --important-text: #ffb703;
   --border-color: #fb8500;
 }
@@ -9,22 +8,69 @@ body {
   box-sizing: border-box;
 }
 
-header, footer {
+/* Styles for the page header */
+
+.custom-header {
   background-color: var(--dark-background);
+  border-bottom: 1px solid gray;
+}
+
+.nav-item .nav-link {
+  transition: color 0.3s ease;
 }
 
 .nav-item .nav-link.active {
-  font-weight: bold;
-  color: var(--important-text);
-  border-bottom: 2px solid var(--important-text);
+  color: white;
 }
 
-.nav-hover:hover {
-  color: var(--light-background);
+.nav-item .nav-link.inactive {
+  color: gray;
 }
 
-.nav-item .nav-link.active .nav-hover:hover {
-  color: var(--important-text);
+.nav-item .nav-link:hover {
+  color: white;
+}
+
+.navbar-brand {
+  transition: color 0.2s ease;
+}
+
+.navbar-brand.active-brand {
+  color: white;
+}
+
+.navbar-brand.inactive-brand {
+  color: gray;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /* When the navbar is expanded on small screens */
+  .navbar-nav {
+    text-align: right;
+  }
+}
+
+.blur-background main,
+.blur-background footer {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+/* Styles for the main content */
+
+.main-background {
+  background: black;
+}
+
+/* Styles for the page footer */
+
+.custom-footer {
+  background-color: var(--dark-background);
 }
 
 .footer-icon {
@@ -79,10 +125,4 @@ header, footer {
 .skills-card:hover .skills-icon {
   color: var(--important-text);
   transform: scale(1.15);
-}
-
-@media screen and (min-width: 992px) {
-  .nav-item {
-    font-size: 1.2rem;
-  }
 }

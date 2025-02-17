@@ -8,16 +8,16 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
-      <div className="d-flex flex-column min-vh-100">
-        <Header />
+      <Header />
+      <div className="main-background d-flex flex-column">
         <main className="p-lg-5 p-md-4 p-3 flex-grow-1">
           <Outlet />
         </main>
-        <Footer />
       </div>
+      <Footer />
     </ApolloProvider>
   );
 }

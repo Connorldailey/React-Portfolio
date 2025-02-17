@@ -4,7 +4,7 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_CONTACT } from '../utils/mutations';
 
-const Contact: React.FC = () => {
+const ContactPage: React.FC = () => {
     // State variable to store form input values
     const [formData, setFormData] = useState({
         name: '',
@@ -120,4 +120,4 @@ const Contact: React.FC = () => {
     );
 };
 
-export default Contact;
+export default ContactPage;

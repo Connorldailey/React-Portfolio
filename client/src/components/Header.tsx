@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { memo, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Navigation from './Navigation';
 
 const Header: React.FC = () => {
+    useEffect(() => {
+        const collapseElement = document.getElementById('navbarNav');
+    
+        // Handlers to add/remove a class on <body>
+        const handleShow = () => {
+            document.body.classList.add('blur-background');
+        };
+        const handleHide = () => {
+            document.body.classList.remove('blur-background');
+        };
+    
+        // Attach Bootstrap's show/hide collapse events
+        collapseElement?.addEventListener('show.bs.collapse', handleShow);
+        collapseElement?.addEventListener('hide.bs.collapse', handleHide);
+    
+        // Clean up
+        return () => {
+            collapseElement?.removeEventListener('show.bs.collapse', handleShow);
+            collapseElement?.removeEventListener('hide.bs.collapse', handleHide);
+        };
+      }, []);
+
     return (
-        <header>
+        <header className="sticky-top">
             {/* Navigation bar */}
-            <nav className="navbar navbar-expand-lg navbar-dark p-4">
+            <nav className="custom-header navbar navbar-expand-md">
                 <div className="container-fluid">
                     {/* Website title */}
-                    <h1 className="text-light">Connor Dailey</h1>
+                    <NavLink 
+                        to="/"
+                        className={({ isActive }) =>
+                            `navbar-brand ${isActive ? 'active-brand' : 'inactive-brand'}`
+                        }
+                    >
+                        Connor Dailey
+                    </NavLink>
                     {/* Toggle Button for Small Screens */}
                     <button
-                        className="navbar-toggler d-lg-none ms-auto"
+                        className="navbar-toggler d-md-none ms-auto"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
@@ -20,7 +50,7 @@ const Header: React.FC = () => {
                         aria-label="Toggle navigation"
                     >
                         {/* Icon for the toggle button */}
-                        <span className="navbar-toggler-icon"></span>
+                        <i className="bi bi-list text-light"></i>
                     </button>
                     {/* Collapsible navigation section */}
                     <div className="collapse navbar-collapse" id="navbarNav">
@@ -33,4 +63,4 @@ const Header: React.FC = () => {
     );
 };
 
-export default Header;
+export default memo(Header);
