@@ -1,36 +1,73 @@
-import React from 'react';
+import React, { memo, useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Navigation from './Navigation';
+import { useNavigation } from '../contexts/NavigationContext';
 
 const Header: React.FC = () => {
+    const { menuOpen, setMenuOpen } = useNavigation();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            setWindowWidth(width);
+            // Remove blur if switching to desktop view.
+            if (width > 768) {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [setMenuOpen])
+
+    const handleMenuToggle = () => {
+        setMenuOpen((prev) => !prev);
+    }
+
+    const handleLinkClick = () => {
+        setMenuOpen(false);
+    }
+
     return (
-        <header>
-            {/* Navigation bar */}
-            <nav className="navbar navbar-expand-lg navbar-dark p-4">
+        <header className="sticky-top">
+            <nav className="custom-header navbar navbar-expand-md">
                 <div className="container-fluid">
-                    {/* Website title */}
-                    <h1 className="text-light">Connor Dailey</h1>
-                    {/* Toggle Button for Small Screens */}
-                    <button
-                        className="navbar-toggler d-lg-none ms-auto"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            `navbar-brand ${isActive ? 'active-brand' : 'inactive-brand'}`
+                        }
                     >
-                        {/* Icon for the toggle button */}
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    {/* Collapsible navigation section */}
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        {/* Render the Navigation component */}
-                        <Navigation />
-                    </div>
+                        Connor Dailey
+                    </NavLink>
+                    {windowWidth < 768 ? (
+                        <button
+                            className="navbar-toggler ms-auto"
+                            type="button"
+                            onClick={handleMenuToggle}
+                            aria-label="Toggle navigation"
+                        >
+                        <i
+                            className={
+                                menuOpen ? 'bi bi-x-lg text-light' : 'bi bi-list text-light'
+                            }
+                        ></i>
+                        </button>
+                    ) : (
+                        <div className="nav-menu">
+                            <Navigation onLinkClick={handleLinkClick} />
+                        </div>
+                    )}
                 </div>
             </nav>
+            {windowWidth < 768 && menuOpen && (
+                <div className="nav-menu overlay">
+                    <Navigation onLinkClick={handleLinkClick} />
+                </div>
+            )}
         </header>
-    );
+      );
 };
 
-export default Header;
+export default memo(Header);

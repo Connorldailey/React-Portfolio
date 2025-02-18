@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer className="p-3">
+        <footer className="custom-footer p-3">
             <div className="container-fluid">
                 <div className="d-flex justify-content-center">
                     {/* Map over social links */}

@@ -1,4 +1,4 @@
-export default function Resume() {
+const ResumePage: React.FC = () => {
     return (
         <section>
             {/* Section title */}
@@ -38,4 +38,6 @@ export default function Resume() {
             </div>
         </section>
     );
-}
+};
+
+export default ResumePage;

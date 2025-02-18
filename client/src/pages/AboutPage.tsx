@@ -34,7 +34,7 @@ const skills: SkillProps[] = [
     },
 ];
 
-const AboutMe: React.FC = () => {
+const AboutPage: React.FC = () => {
     return (
         <section>
             {/* About Me Section */}
@@ -122,4 +122,4 @@ const AboutMe: React.FC = () => {
     );
 };
 
-export default AboutMe;
+export default AboutPage;

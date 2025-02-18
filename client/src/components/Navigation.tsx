@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
-    const navLinks = [
-        { label: 'About Me', path: '/' },
-        { label: 'Portfolio', path: '/portfolio' },
-        { label: 'Contact', path: '/contact' },
-        { label: 'Resume', path: '/resume' },
-    ];
+interface NavLinkItem {
+    label: string;
+    path: string;
+}
 
+interface NavigationProps {
+    onLinkClick: () => void;
+}
+
+const navLinks: NavLinkItem[] = [
+    { label: 'About', path: '/about' },
+    { label: 'Projects', path: '/projects' },
+    { label: 'Contact', path: '/contact' },
+    { label: 'Resume', path: '/resume' },
+];
+
+const Navigation: React.FC<NavigationProps> = ({ onLinkClick }) => {
     return (
-        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul className="navbar-nav ms-auto mt-4 mt-md-0">
             {navLinks.map(({ label, path }, index) => (
-                <li key={index} className="nav-item ms-lg-3">
+                <li key={index} className="nav-item mb-4 mb-md-0 ms-md-4">
                     <NavLink
-                        className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`}
                         to={path}
+                        className={({ isActive }) => 
+                            `nav-link ${isActive ? 'active' : 'inactive'}`
+                        }
+                        onClick={onLinkClick}
                     >
-                        <div className="nav-hover">{label}</div>
+                        {label}
                     </NavLink>
                 </li>
             ))}
@@ -25,7 +37,7 @@ const Navigation: React.FC = () => {
     );
 };
 
-export default Navigation;
+export default memo(Navigation);
 
 
 
