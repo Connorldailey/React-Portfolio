@@ -6,6 +6,10 @@ interface NavLinkItem {
     path: string;
 }
 
+interface NavigationProps {
+    onLinkClick: () => void;
+}
+
 const navLinks: NavLinkItem[] = [
     { label: 'About', path: '/about' },
     { label: 'Projects', path: '/projects' },
@@ -13,18 +17,7 @@ const navLinks: NavLinkItem[] = [
     { label: 'Resume', path: '/resume' },
 ];
 
-function handleLinkClick() {
-    // Remove blur
-    document.body.classList.remove('blur-background');
-
-    // Collapse the nav if it's open
-    const navbarNav = document.getElementById('navbarNav');
-    if (navbarNav && navbarNav.classList.contains('show')) {
-        navbarNav.classList.remove('show');
-    }
-}
-
-const Navigation: React.FC = () => {
+const Navigation: React.FC<NavigationProps> = ({ onLinkClick }) => {
     return (
         <ul className="navbar-nav ms-auto mt-4 mt-md-0">
             {navLinks.map(({ label, path }, index) => (
@@ -34,7 +27,7 @@ const Navigation: React.FC = () => {
                         className={({ isActive }) => 
                             `nav-link ${isActive ? 'active' : 'inactive'}`
                         }
-                        onClick={handleLinkClick}
+                        onClick={onLinkClick}
                     >
                         {label}
                     </NavLink>

@@ -1,37 +1,39 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from './Navigation';
+import { useNavigation } from '../contexts/NavigationContext';
 
 const Header: React.FC = () => {
+    const { menuOpen, setMenuOpen } = useNavigation();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
     useEffect(() => {
-        const collapseElement = document.getElementById('navbarNav');
-    
-        // Handlers to add/remove a class on <body>
-        const handleShow = () => {
-            document.body.classList.add('blur-background');
+        const handleResize = () => {
+            const width = window.innerWidth;
+            setWindowWidth(width);
+            // Remove blur if switching to desktop view.
+            if (width > 768) {
+                setMenuOpen(false);
+            }
         };
-        const handleHide = () => {
-            document.body.classList.remove('blur-background');
-        };
-    
-        // Attach Bootstrap's show/hide collapse events
-        collapseElement?.addEventListener('show.bs.collapse', handleShow);
-        collapseElement?.addEventListener('hide.bs.collapse', handleHide);
-    
-        // Clean up
-        return () => {
-            collapseElement?.removeEventListener('show.bs.collapse', handleShow);
-            collapseElement?.removeEventListener('hide.bs.collapse', handleHide);
-        };
-      }, []);
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [setMenuOpen])
+
+    const handleMenuToggle = () => {
+        setMenuOpen((prev) => !prev);
+    }
+
+    const handleLinkClick = () => {
+        setMenuOpen(false);
+    }
 
     return (
         <header className="sticky-top">
-            {/* Navigation bar */}
             <nav className="custom-header navbar navbar-expand-md">
                 <div className="container-fluid">
-                    {/* Website title */}
-                    <NavLink 
+                    <NavLink
                         to="/"
                         className={({ isActive }) =>
                             `navbar-brand ${isActive ? 'active-brand' : 'inactive-brand'}`
@@ -39,28 +41,33 @@ const Header: React.FC = () => {
                     >
                         Connor Dailey
                     </NavLink>
-                    {/* Toggle Button for Small Screens */}
-                    <button
-                        className="navbar-toggler d-md-none ms-auto"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        {/* Icon for the toggle button */}
-                        <i className="bi bi-list text-light"></i>
-                    </button>
-                    {/* Collapsible navigation section */}
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        {/* Render the Navigation component */}
-                        <Navigation />
-                    </div>
+                    {windowWidth < 768 ? (
+                        <button
+                            className="navbar-toggler ms-auto"
+                            type="button"
+                            onClick={handleMenuToggle}
+                            aria-label="Toggle navigation"
+                        >
+                        <i
+                            className={
+                                menuOpen ? 'bi bi-x-lg text-light' : 'bi bi-list text-light'
+                            }
+                        ></i>
+                        </button>
+                    ) : (
+                        <div className="nav-menu">
+                            <Navigation onLinkClick={handleLinkClick} />
+                        </div>
+                    )}
                 </div>
             </nav>
+            {windowWidth < 768 && menuOpen && (
+                <div className="nav-menu overlay">
+                    <Navigation onLinkClick={handleLinkClick} />
+                </div>
+            )}
         </header>
-    );
+      );
 };
 
 export default memo(Header);

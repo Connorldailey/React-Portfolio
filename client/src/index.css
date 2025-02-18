@@ -9,56 +9,66 @@ body {
 }
 
 /* Styles for the page header */
-
 .custom-header {
-  background-color: var(--dark-background);
+  background: rgba(0, 0, 0, 0.95);
   border-bottom: 1px solid gray;
 }
 
-.nav-item .nav-link {
-  transition: color 0.3s ease;
-}
-
-.nav-item .nav-link.active {
-  color: white;
-}
-
-.nav-item .nav-link.inactive {
-  color: gray;
-}
-
-.nav-item .nav-link:hover {
-  color: white;
-}
-
+.nav-item .nav-link, 
 .navbar-brand {
   transition: color 0.2s ease;
 }
 
+.nav-item .nav-link.active,
 .navbar-brand.active-brand {
   color: white;
 }
 
+.nav-item .nav-link.inactive,
 .navbar-brand.inactive-brand {
   color: gray;
 }
 
+.nav-item .nav-link:hover,
 .navbar-brand:hover {
   color: white;
 }
 
-@media (max-width: 768px) {
-  /* When the navbar is expanded on small screens */
-  .navbar-nav {
-    text-align: right;
-  }
-}
-
-.blur-background main,
-.blur-background footer {
+.blur {
   filter: blur(4px);
   transition: filter 0.3s ease;
   pointer-events: none;
+}
+
+/* Navigation overlay for mobile screens */
+@media screen and (max-width: 768px) {
+  .nav-menu.overlay {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1050;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .nav-menu.overlay .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-menu.overlay .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu.overlay .nav-link:hover {
+    color: white;
+  }
 }
 
 /* Styles for the main content */
