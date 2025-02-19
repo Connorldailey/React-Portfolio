@@ -3,21 +3,21 @@ import React from 'react';
 // Define the prop types for the Project component
 interface ProjectProps {
     title: string;
+    index: number;
     image: string;
     description: string;
     githubLink: string;
     deployedLink: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, image, description, githubLink, deployedLink }) => {
+const Project: React.FC<ProjectProps> = ({ index, title, image, description, githubLink, deployedLink }) => {
     return (
-        <div className="col-lg-4 col-md-6 mb-4">
-            {/* Card component to display project information */}
-            <div className="card square-card h-100">
+        <div className={index < 5 ? 'pb-4' : ''}>
+            <div className={`card project-card main-background `}>
                 {/* Card body */}
                 <div className="card-body p-0">
                     {/* Project image */}
-                    <img src={image} alt={title} className="img-fluid" loading="lazy"/>
+                    <img src={image} alt={title} className="img-fluid project-image" loading="lazy"/>
                     {/* Card content area */}
                     <div className="p-3">
                         <div className="border-bottom pb-3">

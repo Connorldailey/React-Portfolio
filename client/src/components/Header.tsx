@@ -5,7 +5,7 @@ import { useNavigation } from '../contexts/NavigationContext';
 
 const Header: React.FC = () => {
     const { menuOpen, setMenuOpen } = useNavigation();
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         const handleResize = () => {
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
 
     return (
         <header className="sticky-top">
-            <nav className="custom-header navbar navbar-expand-md">
+            <nav className="custom-header navbar navbar-expand-md py-md-3">
                 <div className="container-fluid">
                     <NavLink
                         to="/"
