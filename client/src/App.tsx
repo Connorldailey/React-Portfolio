@@ -12,7 +12,7 @@ const client = new ApolloClient({
 const MainContent: React.FC = () => {
   const { menuOpen } = useNavigation();
   return (
-    <main className={`p-lg-5 p-md-4 p-3 flex-grow-1 ${menuOpen ? 'blur' : ''}`}>
+    <main className={`flex-grow-1 ${menuOpen ? 'blur' : ''}`}>
       <Outlet />
     </main>
   )
@@ -22,10 +22,12 @@ const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
       <NavigationProvider>
-        <div className="main-background d-flex flex-column">
-          <Header />
-          <MainContent />
-          <Footer />
+        <div className="main-background">
+          <div className="d-flex flex-column mx-lg-5 mx-md-4 mx-3">
+            <Header />
+            <MainContent />
+            <Footer />
+          </div>
         </div>
       </NavigationProvider>
     </ApolloProvider>

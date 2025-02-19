@@ -36,7 +36,7 @@ const skills: SkillProps[] = [
 
 const AboutPage: React.FC = () => {
     return (
-        <section>
+        <section className='text-gray'>
             {/* About Me Section */}
             <h2 className="mb-0">About Me</h2>
             <div className="border-bottom">

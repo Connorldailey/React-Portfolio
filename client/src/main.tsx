@@ -12,7 +12,6 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import Contact from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
-import Resume from './pages/ResumePage';
 import ErrorPage from './pages/ErrorPage';
 
 // Define the accessible routes
@@ -37,10 +36,6 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
-      },
-      {
-        path: 'resume',
-        element: <Resume />,
       },
     ],
   },

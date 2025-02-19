@@ -14,7 +14,6 @@ const navLinks: NavLinkItem[] = [
     { label: 'About', path: '/about' },
     { label: 'Projects', path: '/projects' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Resume', path: '/resume' },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ onLinkClick }) => {
@@ -33,6 +32,9 @@ const Navigation: React.FC<NavigationProps> = ({ onLinkClick }) => {
                     </NavLink>
                 </li>
             ))}
+            <li className='nav-link mt-md-0 ms-0 ms-md-4'>
+                <a className='resume-link' href="/ConnorDailey-Resume(MASTER).pdf" download="ConnorDailey_Resume">Resume</a>
+            </li>
         </ul>
     );
 };
