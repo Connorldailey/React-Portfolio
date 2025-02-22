@@ -3,8 +3,18 @@
   --text-gray: #6C757D;
 }
 
-body {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -15,7 +25,6 @@ h1 {
 .text-gray {
   color: var(--text-gray);
 }
-
 
 /* 
   ----------------------------------
@@ -97,18 +106,6 @@ h1 {
   }
 }
 
-
-/* 
-  ----------------------------------
-  STYLES FOR THE MAIN CONTENT
-  ----------------------------------
-*/
-
-.main-background {
-  background: black;
-}
-
-
 /* 
   ----------------------------------
   STYLES FOR THE FOOTER
@@ -145,7 +142,17 @@ h1 {
 
 /* 
   ----------------------------------
-  STYLES FOR THE HOMEPAGE
+  STYLES FOR THE MAIN CONTENT
+  ----------------------------------
+*/
+
+.main-background {
+  background: black;
+}
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE (INTRO SECTION)
   ----------------------------------
 */
 
@@ -291,30 +298,45 @@ h1 {
   z-index: 1;
 }
 
-.projects-section {
+/* 
+  ------------------------------
+  PROJECTS CAROUSEL STYLES
+  ------------------------------
+*/
+
+.project-carousel-section {
   padding: 2rem 1rem;
   margin: 0 auto;
 }
 
-.profile-image {
-  min-width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
 /* 
-  Project Card (Homepage)
+  ------------------------------
+  PROJECTS CARD STYLES
+  ------------------------------
 */
 
 .project-card {
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 500px;
+  margin: 0 2rem;
 }
 
-.project-image {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.card-header {
+  background: none;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.card-title {
+  font-size: 2.8rem;
+}
+
+.github-icon {
+  font-size: 2.8rem;
+  color: black;
+}
+
+.link-icon {
+  font-size: 2.8rem;
+  color: white;
 }
 
 /* Skills Card */
@@ -337,4 +359,10 @@ h1 {
 .skills-card:hover .skills-icon {
   color: var(--important-text);
   transform: scale(1.15);
+}
+
+.profile-image {
+  min-width: 150px;
+  height: 150px;
+  object-fit: cover;
 }

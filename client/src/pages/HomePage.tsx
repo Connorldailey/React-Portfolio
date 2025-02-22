@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Project from "../components/Project";
+import ProjectCarousel from "../components/ProjectCarousel";
 import projectList from "../assets/projectList";
 
 const specializations = ['web applications', 'digital solutions'];
@@ -31,7 +31,8 @@ const HomePage: React.FC = () => {
 
     return (
         <>
-            <section className="intro-section">
+            {/* Intro Section*/}
+            <section className="intro-section border-bottom">
                 <p className='intro-text mb-1'>Hi, my name is</p>
                 <h1 className='headline mb-2'>Connor Dailey.</h1>
                 <div className=''>
@@ -45,21 +46,14 @@ const HomePage: React.FC = () => {
                         <p key={`current-${currentText}`} className="dynamic-text slide-up-low">{currentText}.</p>
                     </div>
                 </div>
-                
             </section>
-            <section className='border-top projects-section'>
+            {/* Projects Section */}
+            <section className='project-carousel-section border-bottom'>
                 {/* Map over the projects array to render each project */}
-                {projectList.map((project, index) => (
-                    <Project
-                        key={index}
-                        index={index}
-                        title={project.title}
-                        image={project.image}
-                        description={project.description}
-                        githubLink={project.githubLink}
-                        deployedLink={project.deployedLink}
-                    />
-                ))}
+                <ProjectCarousel projects={projectList} />
+            </section>
+            <section className='border-bottom'>
+                <h1>More Content</h1>
             </section>
         </>
     );
