@@ -1,8 +1,7 @@
 // Import project images
 import trivialCodeImg from "../assets/images/trivialCode.png";
-import weatherDashboardImg from "../assets/images/weatherDashboard.png";
-import culinaryCompass from "../assets/images/culinaryCompass.png";
-import defaultPageImg from "../assets/images/defaultPage.jpeg";
+import culinaryCompassImg from "../assets/images/culinaryCompass.png";
+import workoutTrackerImg from "../assets/images/workoutTracker.png";
 
 interface Project {
     title: string;
@@ -21,39 +20,18 @@ const projectList: Project[] = [
         deployedLink: 'https://connorldailey.github.io/Trivial-Code/',
     },
     {
-        title: 'Weather Dashboard',
-        image: weatherDashboardImg,
-        description: 'A simple 5 day weather dashboard.',
-        githubLink: 'https://github.com/Connorldailey/Weather-Dashboard',
-        deployedLink: 'https://module9-challenge-b2vj.onrender.com',
-    },
-    {
         title: 'Culinary Compass',
-        image: culinaryCompass,
+        image: culinaryCompassImg,
         description: 'Explore meal ideas, access cooking instructions, and ask questions from an AI assistant.',
         githubLink: 'https://github.com/Connorldailey/Culinary-Compass.git',
         deployedLink: 'https://culinary-compass-8j0q.onrender.com/',
     },
     {
-        title: 'Project Coming Soon',
-        image: defaultPageImg,
-        description: 'Exciting new projects are coming soon. Stay tuned for updates!',
-        githubLink: '#',
-        deployedLink: '#',
-    },
-    {
-        title: 'Project Coming Soon',
-        image: defaultPageImg,
-        description: 'Exciting new projects are coming soon. Stay tuned for updates!',
-        githubLink: '#',
-        deployedLink: '#',
-    },
-    {
-        title: 'Project Coming Soon',
-        image: defaultPageImg,
-        description: 'Exciting new projects are coming soon. Stay tuned for updates!',
-        githubLink: '#',
-        deployedLink: '#',
+        title: 'Workout Tracker',
+        image: workoutTrackerImg,
+        description: 'Create exercise routines and track workout data.',
+        githubLink: 'https://github.com/Connorldailey/Workout-Tracker',
+        deployedLink: 'https://workout-tracker-iiuz.onrender.com',
     },
 ];
 

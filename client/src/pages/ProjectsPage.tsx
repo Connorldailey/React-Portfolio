@@ -1,4 +1,4 @@
-import Project from "../components/Project";
+import ProjectCard from "../components/ProjectCard";
 import projectList from "../assets/projectList";
 
 const ProjectsPage: React.FC = () => {
@@ -11,7 +11,7 @@ const ProjectsPage: React.FC = () => {
                 <div className="row">
                     {/* Map over the projects array to render each project */}
                     {projectList.map((project, index) => (
-                        <Project
+                        <ProjectCard
                             key={index}
                             title={project.title}
                             image={project.image}
