@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCarousel from "../components/ProjectCarousel";
 import projectList from "../assets/projectList";
+import portfolioImg from '../assets/images/portfolioImage.jpeg';
 
 const specializations = ['web applications', 'digital solutions'];
 
@@ -52,8 +53,24 @@ const HomePage: React.FC = () => {
                 {/* Map over the projects array to render each project */}
                 <ProjectCarousel projects={projectList} />
             </section>
-            <section className='border-bottom'>
-                <h1>More Content</h1>
+            <section className="about-section border-bottom">
+                <div className="text-content">
+                    <p className="text-gray">
+                        Based in Mount Vernon, OH, I’m a Full-Stack Web Developer who thrives on 
+                        turning complexity into clean, user-focused solutions. Passionate about 
+                        both innovation and simplicity, I believe every challenge is an opportunity 
+                        to transform big ideas into elegant, minimalist applications. I’m committed 
+                        to continuous learning, always pushing to craft efficient code that proves—less 
+                        truly is more.
+                    </p>
+                </div>
+                <div className="image-content">
+                    <img 
+                        src={portfolioImg} 
+                        className="portfolio-image"
+                        alt="Portfolio Image" 
+                    />
+                </div>
             </section>
         </>
     );

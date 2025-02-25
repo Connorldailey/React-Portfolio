@@ -300,13 +300,108 @@ h1 {
 
 /* 
   ------------------------------
-  PROJECTS CAROUSEL STYLES
+  PROJECT CAROUSEL STYLES
   ------------------------------
 */
 
 .project-carousel-section {
   padding: 2rem 1rem;
   margin: 0 auto;
+}
+
+.carousel {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 500px;
+  width: 100%;
+}
+
+.modern-caption {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 8px;
+  bottom: 20px;
+}
+
+.carousel-indicators button {
+  background-color: #ccc;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Invert default arrow icons for a modern look */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.github-icon,
+.link-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.github-icon:hover,
+.link-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE (About Me SECTION)
+  ----------------------------------
+*/
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+}
+
+.text-content {
+  text-align: center;
+}
+
+.image-content {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-image {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  
+  .text-content {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .image-content {
+    flex-shrink: 0;
+  }
+  .portfolio-image {
+    max-width: 350px;
+  }
 }
 
 /* 
