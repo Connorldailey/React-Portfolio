@@ -48,75 +48,73 @@ const ContactPage: React.FC = () => {
     };
 
     return (
-        <section>
+        <>
             {/* Contact form section */}
-            <h2>Contact</h2>
-
-            {/* Success or Error Message */}
-            {message && (
-                <div
-                    className={`alert ${
-                        message.type === 'success' ? 'alert-success' : 'alert-danger'
-                    } mt-3 col-lg-6 col-md-8 col-12`}
-                    role="alert"
-                >
-                    {message.text}
-                </div>
-            )}
-
-            {/* Form for collecting user input */}
-            <form className="form" onSubmit={handleFormSubmit}>
-                {/* Name Input Field */}
-                <div className="mb-3">
+            <section className='contact-form-section'>
+                <h2 className='text-light'>Contact</h2>
+                {/* Form for collecting user input */}
+                <form className="form p-0 p-md-3" onSubmit={handleFormSubmit}>
                     <div className="col-lg-6 col-md-8 col-12">
-                        <label htmlFor="name-input" className="form-label">Name</label>
-                        <input 
-                            value={formData.name}
-                            name="name"
-                            id="name-input"
-                            onChange={handleInputChange}
-                            type="text" 
-                            className="form-control" 
-                            required
-                        />
+                        {/* Name Input Field */}
+                        <div className="mb-3">
+                            <label htmlFor="name-input" className="form-label">Name</label>
+                            <input 
+                                value={formData.name}
+                                name="name"
+                                id="name-input"
+                                onChange={handleInputChange}
+                                type="text" 
+                                className="form-control" 
+                                required
+                            />
+                        </div>
+                        {/* Email Input Field */}
+                        <div className="mb-3">
+                            <label htmlFor="email-input" className="form-label">Email Address</label>
+                            <input 
+                                value={formData.email}
+                                name="email"
+                                id="email-input"
+                                onChange={handleInputChange}
+                                type="email" 
+                                className="form-control" 
+                                required
+                            />
+                        </div>
+                        {/* Message Input Field */}
+                        <div className="mb-3">
+                            <label htmlFor="message-input" className="form-label">Message</label>
+                            <textarea 
+                                value={formData.message}
+                                name="message"
+                                id="message-input"
+                                onChange={handleInputChange}
+                                className="form-control" 
+                                rows={5}
+                                required
+                            />
+                        </div>
+                        {/* Success or Error Message */}
+                        {message && (
+                            <div
+                                className={`alert ${
+                                    message.type === 'success' ? 'alert-success' : 'alert-danger'
+                                }`}
+                                role="alert"
+                            >
+                                {message.text}
+                            </div>
+                        )}
+                        {/* Submit Button */}
+                        <div className="d-flex justify-content-center">
+                            <button type="submit" className="submit-button">
+                                Submit
+                            </button>
+                        </div>
                     </div>
-                </div>
-                {/* Email Input Field */}
-                <div className="mb-3">
-                    <div className="col-lg-6 col-md-8 col-12">
-                        <label htmlFor="email-input" className="form-label">Email Address</label>
-                        <input 
-                            value={formData.email}
-                            name="email"
-                            id="email-input"
-                            onChange={handleInputChange}
-                            type="email" 
-                            className="form-control" 
-                            required
-                        />
-                    </div>
-                </div>
-                {/* Message Input Field */}
-                <div className="mb-3">
-                    <div className="col-lg-6 col-md-8 col-12">
-                        <label htmlFor="message-input" className="form-label">Message</label>
-                        <textarea 
-                            value={formData.message}
-                            name="message"
-                            id="message-input"
-                            onChange={handleInputChange}
-                            className="form-control" 
-                            rows={5}
-                            required
-                        />
-                    </div>
-                </div>
-                {/* Submit Button */}
-                <button type="submit" className="btn btn-primary">
-                    Submit
-                </button>
-            </form>
-        </section>
+                </form>
+            </section>
+        </>
     );
 };
 

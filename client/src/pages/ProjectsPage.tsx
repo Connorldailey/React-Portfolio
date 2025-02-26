@@ -3,24 +3,21 @@ import projectList from "../assets/projectList";
 
 const ProjectsPage: React.FC = () => {
     return (
-        <section className="text-gray">
-            {/* Portfolio section header */}
-            <h2 className="mb-4">Portfolio</h2>
-            {/* Container for the project cards */}
-            <div className="container">
-                <div className="row">
-                    {/* Map over the projects array to render each project */}
-                    {projectList.map((project, index) => (
+        <section className="projects-section text-gray">
+            <h2 className="text-light mb-4">Portfolio</h2>
+            <div className="row">
+                {/* Map over the projects array to render each project */}
+                {projectList.map((project, index) => (
+                    <div className="col-sm-12 col-md-6 col-lg-4 mb-4" key={index}>
                         <ProjectCard
-                            key={index}
                             title={project.title}
                             image={project.image}
                             description={project.description}
                             githubLink={project.githubLink}
                             deployedLink={project.deployedLink}
                         />
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
     );

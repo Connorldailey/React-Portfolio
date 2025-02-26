@@ -3,14 +3,12 @@ import myImage from '../assets/images/portfolioImage.jpeg';
 import { Link } from 'react-router-dom';
 import Skill from '../components/Skill.js';
 
-// Define SkillProps
 interface SkillProps {
     title: string;
     icon: string;
     description: string;
 }
 
-// Core skills array
 const skills: SkillProps[] = [
     {
         title: "Front-End Development",
@@ -36,10 +34,10 @@ const skills: SkillProps[] = [
 
 const AboutPage: React.FC = () => {
     return (
-        <section className='text-gray'>
+        <>  
             {/* About Me Section */}
-            <h2 className="mb-0">About Me</h2>
-            <div className="border-bottom">
+            <section className='about-me-section text-gray border-bottom'>
+                <h2 className="text-light">About Me</h2>
                 <div className="container">
                     <div className="row">
                         {/* Profile Image */}
@@ -56,7 +54,7 @@ const AboutPage: React.FC = () => {
                         {/* Introduction Text */}
                         <div className="col-lg-10">
                             <p>
-                                <strong className="fs-5">Welcome!</strong> I’m Connor Dailey, a Full-Stack Web Developer with a Bachelor’s in Mathematics 
+                                <strong className="fs-5 text-light">Welcome!</strong> I’m Connor Dailey, a Full-Stack Web Developer with a Bachelor’s in Mathematics 
                                 and a certificate in Full Stack Web Development from The Ohio State University. I love tackling complex challenges by 
                                 building practical, user-focused solutions with HTML, CSS, JavaScript, React, Node.js, and TypeScript. Whether it’s 
                                 optimizing a front-end interface or crafting a robust back-end, I’m driven by continuous learning and the thrill of 
@@ -69,10 +67,10 @@ const AboutPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             {/* Core Skills Section */}
-            <div className="border-bottom pt-3">
-                <h3 className="mb-3">Core Skills</h3>
+            <section className='core-skills-section border-bottom'>
+                <h2 className="text-light mb-4">Core Skills</h2>
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         {/* Map over skills array to display each skill */}
@@ -86,11 +84,11 @@ const AboutPage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
             {/* Hobbies and Interests Section */}
-            <div className="border-bottom pt-3">
-                <h3>Hobbies and Interests</h3>
-                <div className="p-3">
+            <section className="hobbies-interests-section border-bottom">
+                <h3 className="text-light">Hobbies and Interests</h3>
+                <div className='px-3 pt-3'>
                     <p>
                         Outside of coding, I have a variety of interests that keep me grounded and inspired. 
                         I enjoy playing guitar, whether I'm learning a new song or just unwinding with a few chords. 
@@ -105,20 +103,20 @@ const AboutPage: React.FC = () => {
                         keep me balanced and remind me of what truly matters.
                     </p>
                 </div>
-            </div>
+            </section>
             {/* Call to Action Section */}
-            <div className="border-bottom pt-3">
-                <h3 className="mb-0 ">Call to Action</h3>
-                <div className="p-3">
+            <section className="cta-section border-bottom">
+                <h3 className="text-light">Call to Action</h3>
+                <div className='px-3 pt-3'>
                     <p>
-                        <strong>Looking to Collaborate? </strong>
+                        <strong className="text-light">Looking to Collaborate? </strong>
                         I’m always excited about potential collaborations and new opportunities to contribute to impactful projects. 
                         If you’re interested in working together, let’s connect! For inquiries, feedback, or just to say hello, 
                         feel free to reach out through my <Link to="/contact">Contact</Link> page. I’d love to hear from you!
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

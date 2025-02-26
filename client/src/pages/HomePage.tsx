@@ -3,7 +3,13 @@ import ProjectCarousel from "../components/ProjectCarousel";
 import projectList from "../assets/projectList";
 import portfolioImg from '../assets/images/portfolioImage.jpeg';
 
-const specializations = ['web applications', 'digital solutions'];
+const specializations = [
+    'web applications', 
+    'digital solutions',
+    'user-driven experiences',
+    'scalable platforms',
+    'innovative interfaces'
+];
 
 const HomePage: React.FC = () => {
     const [currentText, setCurrentText] = useState<string>(specializations[0]);
