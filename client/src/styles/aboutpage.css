@@ -1,0 +1,21 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE ABOUT PAGE 
+  (General)
+  ----------------------------------
+*/
+
+.about-me-section,
+.core-skills-section,
+.hobbies-interests-section,
+.cta-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+.profile-image {
+  min-width: 150px;
+  height: 150px;
+  object-fit: cover;
+}

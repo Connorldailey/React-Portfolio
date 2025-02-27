@@ -1,0 +1,268 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE 
+  (Intro Section)
+  ----------------------------------
+*/
+
+.intro-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+.intro-text {
+    color: #33CA7F;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.headline {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subheadline {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dynamic-text-container {
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+}
+
+.dynamic-text {
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+/* Medium screens */
+@media screen and (min-width: 576px) {
+    .intro-section {
+        padding: 2rem 3%;
+        max-width: 80%;
+    }
+    .intro-text {
+        font-size: 1.8rem;
+    }
+    .headline {
+        font-size: 3rem;
+    }
+    .subheadline,
+    .dynamic-text {
+        font-size: 2rem;
+    }
+    .dynamic-text-container {
+        height: 3rem;
+    }
+}
+
+/* Larger screens */
+@media screen and (min-width: 768px) {
+    .intro-section {
+        padding: 2.5rem 3%;
+        max-width: 75%;
+    }
+    .intro-text {
+        font-size: 2rem;
+    }
+    .headline {
+        font-size: 3.5rem;
+    }
+    .subheadline,
+    .dynamic-text {
+        font-size: 2.5rem;
+    }
+    .dynamic-text-container {
+        height: 3.5rem;
+    }
+}
+
+/* Extra-large screens */
+@media screen and (min-width: 1024px) {
+    .intro-section {
+        padding: 3rem 3%;
+        max-width: 70%;
+    }
+    .intro-text {
+        font-size: 2.2rem;
+    }
+    .headline {
+        font-size: 4rem;
+    }
+    .subheadline,
+    .dynamic-text {
+        font-size: 3rem;
+    }
+    .dynamic-text-container {
+        height: 4rem;
+    }
+}
+
+/* (Optional) Extra wide screens */
+@media screen and (min-width: 1200px) {
+    .intro-section {
+        max-width: 55%;
+    }
+}
+
+/* Animation for sliding in (from right) */
+@keyframes slideUpHigh {
+    from {
+        transform: translateY(0);
+
+    }
+    to {
+        transform: translateY(-100%);
+
+    }
+}
+.slide-up-high{
+    animation: slideUpHigh 0.5s ease-in-out forwards;
+    z-index: 2;
+}
+
+/* Animation for sliding out (to left) */
+@keyframes slideUpLow {
+    from {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.slide-up-low {
+    transform: translateY(100%);
+    animation: slideUpLow 0.5s ease-in-out forwards;
+    z-index: 1;
+}
+
+
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE 
+  (About Me Section)
+  ----------------------------------
+*/
+
+.about-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text-content {
+    text-align: start;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-image {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-button {
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .text-content {
+        flex: 1;
+        text-align: left;
+        font-size: 120%;
+    }
+    .image-content {
+        flex-shrink: 0;
+    }
+    .portfolio-image {
+        max-width: 350px;
+    }
+    .about-button {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .text-content {
+        font-size: 150%;
+    }
+}
+
+
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE 
+  (Contact Section)
+  ----------------------------------
+*/
+
+.contact-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+.contact-button {
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-button {
+        justify-content: center;
+    }
+}
+
+.homepage-link {
+    color: var(--text-gray);
+    border: 1px solid var(--text-gray);
+    padding: 1rem 5rem;
+    margin: 0;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+.homepage-link:hover {
+    background-color: white;
+    color: black;
+}
+
+.homepage-link .page-link-icon {
+    transition: transform 0.3s ease;
+}
+
+.homepage-link:hover .page-link-icon {
+    transform: rotate(-45deg);
+}

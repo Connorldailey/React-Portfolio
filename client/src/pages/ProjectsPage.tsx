@@ -1,5 +1,6 @@
 import ProjectCard from "../components/ProjectCard";
-import projectList from "../assets/projectList";
+import projectList from "../data/projectList";
+import '../styles/projectspage.css';
 
 const ProjectsPage: React.FC = () => {
     return (

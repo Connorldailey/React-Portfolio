@@ -1,4 +1,3 @@
-// Import project images
 import trivialCodeImg from "../assets/images/trivialCode.png";
 import culinaryCompassImg from "../assets/images/culinaryCompass.png";
 import workoutTrackerImg from "../assets/images/workoutTracker.png";

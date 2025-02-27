@@ -1,36 +1,10 @@
 import React from 'react';
 import myImage from '../assets/images/portfolioImage.jpeg';
 import { Link } from 'react-router-dom';
-import Skill from '../components/Skill.js';
+import SkillCard from '../components/SkillCard.js';
+import '../styles/aboutpage.css';
+import skillList from '../data/skillList.js';
 
-interface SkillProps {
-    title: string;
-    icon: string;
-    description: string;
-}
-
-const skills: SkillProps[] = [
-    {
-        title: "Front-End Development",
-        icon: "bi-filetype-jsx",
-        description: "Expert in creating responsive, user-friendly interfaces using HTML5, CSS3, JavaScript ES6+, and React.",
-    },
-    {
-        title: "Back-End Development",
-        icon: "bi-database",
-        description: "Proficient in server-side programming, building APIs, and working with databases using Node.js, Express, and SQL.",
-    },
-    {
-        title: "Version Control",
-        icon: "bi-file-earmark-diff",
-        description: "Experienced in using Git and GitHub for version control, managing code changes, collaborating with teams, and maintaining project integrity.",
-    },
-    {
-        title: "Adaptability & Growth Mindset",
-        icon: "bi-graph-up-arrow",
-        description: "Always learning and adapting to emerging technologies, including TypeScript, Bootstrap, and modern JavaScript frameworks.",
-    },
-];
 
 const AboutPage: React.FC = () => {
     return (
@@ -74,8 +48,8 @@ const AboutPage: React.FC = () => {
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         {/* Map over skills array to display each skill */}
-                        {skills.map((skill, index) => (
-                            <Skill 
+                        {skillList.map((skill, index) => (
+                            <SkillCard 
                                 key={index}
                                 title={skill.title}
                                 icon={skill.icon}

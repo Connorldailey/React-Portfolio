@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/skillcard.css';
 
 // Define the prop types for the Skill component
 interface SkillProps {
@@ -7,7 +8,7 @@ interface SkillProps {
     description: string;
 }
 
-const Skill: React.FC<SkillProps> = ({ title, icon, description }) => {
+const SkillCard: React.FC<SkillProps> = ({ title, icon, description }) => {
     return (
         <div className="col mb-4">
             {/* Card to display skill information */}
@@ -30,4 +31,4 @@ const Skill: React.FC<SkillProps> = ({ title, icon, description }) => {
     );
 };
 
-export default Skill;
+export default SkillCard;

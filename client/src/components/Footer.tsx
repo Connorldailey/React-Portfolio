@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import '../styles/footer.css'
 
 const socialLinks = [
     { label: 'GitHub', icon: 'bi-github', url: 'https://github.com/connorldailey' },

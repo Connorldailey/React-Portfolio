@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCarousel from "../components/ProjectCarousel";
-import projectList from "../assets/projectList";
-import portfolioImg from '../assets/images/portfolioImage.jpeg';
 import { Link } from 'react-router-dom';
+import ProjectCarousel from "../components/ProjectCarousel";
+import projectList from "../data/projectList";
+import portfolioImg from '../assets/images/portfolioImage.jpeg';
+import '../styles/homepage.css';
 
 const specializations = [
     'web applications', 
@@ -58,7 +59,6 @@ const HomePage: React.FC = () => {
 
             {/* Projects Section */}
             <section className='project-carousel-section border-bottom'>
-                {/* Map over the projects array to render each project */}
                 <ProjectCarousel projects={projectList} />
             </section>
 
@@ -88,7 +88,11 @@ const HomePage: React.FC = () => {
                         to='/about'
                         className='homepage-link'
                     >
-                        About
+                        <div className='d-flex'>
+                            <span className='pe-2'>About</span>
+                            <i className="bi bi-link page-link-icon"></i>
+                        </div>
+                        
                     </Link>
                 </div>
             </section>
@@ -101,7 +105,10 @@ const HomePage: React.FC = () => {
                         to='/contact'
                         className='homepage-link'
                     >
-                        Contact
+                        <div className='d-flex'>
+                            <span className='pe-2'>Contact</span>
+                            <i className="bi bi-link page-link-icon"></i>
+                        </div>
                     </Link>
                 </div>
             </section>

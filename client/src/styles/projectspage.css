@@ -1,0 +1,11 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE PROJECTS PAGE 
+  ----------------------------------
+*/
+
+.projects-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
