@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import ProjectCarousel from "../components/ProjectCarousel";
 import projectList from "../assets/projectList";
 import portfolioImg from '../assets/images/portfolioImage.jpeg';
+import { Link } from 'react-router-dom';
 
-const specializations = ['web applications', 'digital solutions'];
+const specializations = [
+    'web applications', 
+    'digital solutions',
+    'user-driven experiences',
+    'scalable platforms',
+    'innovative interfaces'
+];
 
 const HomePage: React.FC = () => {
     const [currentText, setCurrentText] = useState<string>(specializations[0]);
@@ -48,28 +55,54 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
             {/* Projects Section */}
             <section className='project-carousel-section border-bottom'>
                 {/* Map over the projects array to render each project */}
                 <ProjectCarousel projects={projectList} />
             </section>
+
             <section className="about-section border-bottom">
-                <div className="text-content">
-                    <p className="text-gray">
-                        Based in Mount Vernon, OH, I’m a Full-Stack Web Developer who thrives on 
-                        turning complexity into clean, user-focused solutions. Passionate about 
-                        both innovation and simplicity, I believe every challenge is an opportunity 
-                        to transform big ideas into elegant, minimalist applications. I’m committed 
-                        to continuous learning, always pushing to craft efficient code that proves—less 
-                        truly is more.
-                    </p>
+                <div className='about-content'>
+                    <div className="text-content">
+                        <p className="text-gray">
+                            Based in Mount Vernon, OH, I’m a Full-Stack Web Developer who thrives on 
+                            turning complexity into clean, user-focused solutions. Passionate about 
+                            both innovation and simplicity, I believe every challenge is an opportunity 
+                            to transform big ideas into elegant, minimalist applications. I’m committed 
+                            to continuous learning, always pushing to craft efficient code that proves—less 
+                            truly is more.
+                        </p>
+                    </div>
+                    <div className="image-content">
+                        <img 
+                            src={portfolioImg} 
+                            className="portfolio-image"
+                            alt="Portfolio Image" 
+                        />
+                    </div>
                 </div>
-                <div className="image-content">
-                    <img 
-                        src={portfolioImg} 
-                        className="portfolio-image"
-                        alt="Portfolio Image" 
-                    />
+    
+                <div className='about-button'>
+                    <Link 
+                        to='/about'
+                        className='homepage-link'
+                    >
+                        About
+                    </Link>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section className='contact-section border-bottom'>
+                <h3 className=''>Come say hello!</h3>
+                <div className='contact-button'>
+                    <Link 
+                        to='/contact'
+                        className='homepage-link'
+                    >
+                        Contact
+                    </Link>
                 </div>
             </section>
         </>

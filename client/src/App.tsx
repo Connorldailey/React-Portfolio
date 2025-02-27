@@ -22,10 +22,12 @@ const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
       <NavigationProvider>
-        <div className="main-background">
-          <div className="d-flex flex-column mx-lg-5 mx-md-4 mx-3">
+        <div className="main-background flex-grow-1">
+          <div className="d-flex flex-column min-vh-100 mx-lg-5 mx-md-4 mx-3">
             <Header />
-            <MainContent />
+            <main className="flex-grow-1">
+              <MainContent />
+            </main>
             <Footer />
           </div>
         </div>

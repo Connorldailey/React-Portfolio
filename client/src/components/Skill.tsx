@@ -15,7 +15,7 @@ const Skill: React.FC<SkillProps> = ({ title, icon, description }) => {
                 {/* Card body containing the skill content */}
                 <div className="card-body">
                     {/* Skill title */}
-                    <h5 className="card-title text-center">{title}</h5>
+                    <h5 className="skill-card-title text-center">{title}</h5>
                     {/* Skill icon and description section */}
                     <div className="d-flex flex-column justify-content-between align-items-center">
                         <i 
