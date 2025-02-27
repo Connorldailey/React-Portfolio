@@ -1,0 +1,30 @@
+/* Skills Card */
+
+.skills-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.skill-card-title {
+    color: black;
+}
+
+.skills-card:hover {
+    color: var(--text-gray);
+    background-color: var(--dark-background);
+    transform: scale(1.03);
+}
+
+.skills-card:hover .skill-card-title {
+    color: var(--text-green);
+}
+
+.skills-icon {
+    transition: transform 0.25s ease-in-out;
+}
+
+.skills-card:hover .skills-icon {
+    color: var(--text-yellow);
+    transform: scale(1.15);
+}

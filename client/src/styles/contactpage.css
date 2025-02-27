@@ -1,0 +1,45 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE CONTACT PAGE 
+  ----------------------------------
+*/
+
+.contact-form-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+.submit-button {
+    border-radius: 8px;
+    border: 1px solid var(--text-gray);
+    width: 100px;
+    padding: 10px;
+    background-color: black;
+    color: var(--text-gray);
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button:hover {
+    border-color: white;
+    color: white;
+}
+
+input, textarea {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.9),
+        inset 0 1px 3px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 1),
+        inset 0 0 0 2px #2DE1FC;
+}

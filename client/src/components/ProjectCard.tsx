@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/projectcard.css';
 
 interface ProjectProps {
     title: string;

@@ -1,0 +1,41 @@
+:root {
+    --dark-background: black;
+    --text-gray: #6C757D;
+    --text-green: #33CA7F;
+    --text-yellow: #F6BD60;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    position: relative;
+    list-style-type: none;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .text-gray {
+    color: var(--text-gray);
+  }
+  
+  /* 
+    ----------------------------------
+    STYLES FOR THE MAIN CONTENT
+    ----------------------------------
+  */
+  
+  .main-background {
+    background: black;
+    min-height: 100vh;
+  }

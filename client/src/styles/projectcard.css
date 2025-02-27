@@ -1,0 +1,52 @@
+/* 
+  ------------------------------
+  PROJECTS CARD STYLES
+  ------------------------------
+*/
+
+/* Projects Section */
+.projects-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+/* Project Card Styles */
+.project-card {
+    border: 1px solid var(--text-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.project-card-title {
+    font-size: 2rem;
+    margin: 0;
+    color: #f8f9fa;
+}
+
+/* Action Icons */
+.github-icon,
+.link-icon {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+    color: #2DE1FC;
+}
+
+.github-icon:hover,
+.link-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}

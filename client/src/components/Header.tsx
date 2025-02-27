@@ -2,6 +2,7 @@ import React, { memo, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from './Navigation';
 import { useNavigation } from '../contexts/NavigationContext';
+import '../styles/header.css';
 
 const Header: React.FC = () => {
     const { menuOpen, setMenuOpen } = useNavigation();
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, [setMenuOpen])
+    }, [setMenuOpen]);
 
     const handleMenuToggle = () => {
         setMenuOpen((prev) => !prev);

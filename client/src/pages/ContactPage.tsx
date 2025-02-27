@@ -3,6 +3,7 @@ import { ChangeEvent, FormEvent } from 'react';
 import React from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_CONTACT } from '../utils/mutations';
+import '../styles/contactpage.css';
 
 const ContactPage: React.FC = () => {
     // State variable to store form input values
