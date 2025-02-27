@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/carousel.css';
+import ProjectCard from './ProjectCard';
+import '../styles/projectcarousel.css';
 
 interface Project {
     title: string;
@@ -12,6 +13,14 @@ interface Project {
 interface ProjectCarouselProps {
     projects: Project[];
 }
+
+const backgroundColors = [
+    '#2DE1FC',
+    '#F6BD60',
+    '#33CA7F',
+    '#5D2E8C',
+    '#A22522',
+]
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     // Keep track of the currently active index
@@ -38,6 +47,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                 transform: 'translateX(0) scale(1)',
                 opacity: 1,
                 zIndex: 1,
+                backgroundColor: backgroundColors[index],
             };
         }
         // Determine left/right adjacent indices (wrap around if needed)
@@ -49,6 +59,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                 transform: 'translateX(-40%) scale(0.8)',
                 opacity: 0.4,
                 zIndex: 0,
+                backgroundColor: backgroundColors[index],
             };
         }
         if (index === rightIndex) {
@@ -56,47 +67,94 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                 transform: 'translateX(40%) scale(0.8)',
                 opacity: 0.4,
                 zIndex: 0,
+                backgroundColor: backgroundColors[index],
             };
         }
-        // Hide or keep cards that are not adjacent (you can also add more logic here if you want to show more than two cards)
         return {
             transform: 'translateX(0) scale(0.8)',
             opacity: 0,
             zIndex: -1,
+            backgroundColor: backgroundColors[index],
         };
     };
 
     return (
         windowWidth > 768 ? (
             <div className="carousel-container">
-            {/* Generate a hidden radio input for each project */}
-            {projects.map((_, index) => (
-                <input
-                    key={`radio-${index}`}
-                    type="radio"
-                    name="slider"
-                    id={`item-${index}`}
-                    checked={activeIndex === index}
-                    onChange={() => setActiveIndex(index)}
-                    style={{ display: 'none' }}
-                />
-            ))}
-            <div className="carousel-cards">
-                {projects.map((project, index) => (
-                    <label
-                        key={`card-${index}`}
-                        className="carousel-card"
-                        htmlFor={`item-${index}`}
-                        onClick={() => setActiveIndex(index)}
-                        style={getCardStyle(index)}
-                    >
-                        <img src={project.image} alt={project.title} />
-                    </label>
+                {/* Generate a hidden radio input for each project */}
+                {projects.map((_, index) => (
+                    <input
+                        key={`radio-${index}`}
+                        type="radio"
+                        name="slider"
+                        id={`item-${index}`}
+                        checked={activeIndex === index}
+                        onChange={() => setActiveIndex(index)}
+                        style={{ display: 'none' }}
+                    />
                 ))}
+                <div className="carousel-cards">
+                    {projects.map((project, index) => (
+                        <label
+                            key={`card-${index}`}
+                            className="carousel-card"
+                            htmlFor={`item-${index}`}
+                            onClick={() => setActiveIndex(index)}
+                            style={getCardStyle(index)}
+                        >   
+                            <div className='card-header'>
+                                <h3>
+                                    <a 
+                                        href={project.deployedLink}
+                                        target='_blank' 
+                                        rel="noopener noreferrer" 
+                                    >
+                                        {project.title}
+                                    </a>
+                                </h3>
+                                <div>
+                                    <a 
+                                        href={project.githubLink} 
+                                        target='_blank' 
+                                        rel="noopener noreferrer" 
+                                        className='github-icon'
+                                    >
+                                        <i className="bi bi-github" />
+                                    </a>
+                                    <a 
+                                        href={project.deployedLink} 
+                                        target='_blank' 
+                                        rel="noopener noreferrer" 
+                                        className='project-link-icon'
+                                    >
+                                        <i className="bi bi-box-arrow-up-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='card-body'>
+                                <img src={project.image} alt={project.title} />
+                            </div>
+                        </label>
+                    ))}
+                </div>
             </div>
-        </div>
         ) : (
-            <p>Testing</p>
+            <>
+                {projects.map((project, index) => (
+                    <div className={index !== projects.length - 1 ? 'project-card-item' : ''}>
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            image={project.image}
+                            description={project.description}
+                            githubLink={project.githubLink}
+                            deployedLink={project.deployedLink}
+                        />
+                    </div>
+                    
+                ))}
+            </>
+            
         )
         
     );

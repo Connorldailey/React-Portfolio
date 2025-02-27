@@ -5,38 +5,60 @@
   ----------------------------------
 */
 
-.intro-section {
-    padding: 2rem 1rem;
+.section-label {
+    position: relative;
+    top: -0.8rem;
+    color: var(--text-gray);
+}
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE 
+  (Intro Section)
+  ----------------------------------
+*/
+
+.intro-section::after {
+    content: "";
+    position: absolute;
+    left: 85px;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--text-gray);
+}
+
+.intro-content {
+    padding: 2rem 1rem 2.5rem;
     margin: 0 auto;
 }
 
 .intro-text {
     color: #33CA7F;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
 }
 
 .headline {
     color: white;
     font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .subheadline {
     color: var(--text-gray);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
 .dynamic-text-container {
     position: relative;
     overflow: hidden;
-    height: 2rem;
+    height: 2.3rem;
 }
 
 .dynamic-text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: white;
     position: absolute;
     left: 0;
@@ -46,70 +68,70 @@
 
 /* Medium screens */
 @media screen and (min-width: 576px) {
-    .intro-section {
+    .intro-content {
         padding: 2rem 3%;
         max-width: 80%;
     }
     .intro-text {
-        font-size: 1.8rem;
-    }
-    .headline {
-        font-size: 3rem;
-    }
-    .subheadline,
-    .dynamic-text {
-        font-size: 2rem;
-    }
-    .dynamic-text-container {
-        height: 3rem;
-    }
-}
-
-/* Larger screens */
-@media screen and (min-width: 768px) {
-    .intro-section {
-        padding: 2.5rem 3%;
-        max-width: 75%;
-    }
-    .intro-text {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .headline {
         font-size: 3.5rem;
     }
     .subheadline,
     .dynamic-text {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .dynamic-text-container {
-        height: 3.5rem;
+        height: 3.7rem;
     }
 }
 
-/* Extra-large screens */
-@media screen and (min-width: 1024px) {
-    .intro-section {
-        padding: 3rem 3%;
-        max-width: 70%;
+/* Medium screens */
+@media screen and (min-width: 768px) {
+    .intro-content {
+        padding: 2.5rem 3%;
+        max-width: 75%;
     }
     .intro-text {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
     .headline {
         font-size: 4rem;
     }
     .subheadline,
     .dynamic-text {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     .dynamic-text-container {
         height: 4rem;
     }
 }
 
-/* (Optional) Extra wide screens */
+/* Large screens */
+@media screen and (min-width: 1024px) {
+    .intro-content {
+        padding: 3rem 3%;
+        max-width: 70%;
+    }
+    .intro-text {
+        font-size: 3.5rem;
+    }
+    .headline {
+        font-size: 4.5rem;
+    }
+    .subheadline,
+    .dynamic-text {
+        font-size: 3.2rem;
+    }
+    .dynamic-text-container {
+        height: 4.55rem;
+    }
+}
+
+/* Extra wide screens */
 @media screen and (min-width: 1200px) {
-    .intro-section {
+    .intro-content {
         max-width: 55%;
     }
 }
@@ -152,16 +174,48 @@
 /* 
   ----------------------------------
   STYLES FOR THE HOMEPAGE 
+  (Projects Section)
+  ----------------------------------
+*/
+
+.project-carousel-section::after {
+    content: "";
+    position: absolute;
+    left: 95px;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--text-gray);
+}
+
+.project-carousel-content {
+    padding: 0rem 1rem 2.5rem;
+    margin: 0 auto;
+}
+
+
+
+/* 
+  ----------------------------------
+  STYLES FOR THE HOMEPAGE 
   (About Me Section)
   ----------------------------------
 */
 
-.about-section {
-    padding: 2rem 1rem;
-    margin: 0 auto;
+.about-section::after {
+    content: "";
+    position: absolute;
+    left: 85px;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--text-gray);
 }
 
 .about-content {
+    padding: 0rem 1rem 2.5rem;
+    margin: 0 auto;
+}
+
+.about-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,6 +223,7 @@
 }
 
 .text-content {
+    color: var(--text-gray);
     text-align: start;
 }
 
@@ -190,7 +245,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .about-content {
+    .about-text {
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
@@ -228,7 +283,7 @@
 */
 
 .contact-section {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem 2.5rem;
     margin: 0 auto;
     color: var(--text-gray);
 }
@@ -242,6 +297,17 @@
 @media screen and (min-width: 768px) {
     .contact-button {
         justify-content: center;
+    }
+    .contact-section-text {
+        font-size: 120%;
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-section-text {
+        font-size: 150%;
+        max-width: 80%;
     }
 }
 
