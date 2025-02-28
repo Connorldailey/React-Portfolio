@@ -50,70 +50,120 @@ const ContactPage: React.FC = () => {
 
     return (
         <>
-            {/* Contact form section */}
-            <section className='contact-form-section'>
-                <h2 className='text-light'>Contact</h2>
-                {/* Form for collecting user input */}
-                <form className="form p-0 p-md-3" onSubmit={handleFormSubmit}>
-                    <div className="col-lg-6 col-md-8 col-12">
-                        {/* Name Input Field */}
-                        <div className="mb-3">
-                            <label htmlFor="name-input" className="form-label">Name</label>
-                            <input 
-                                value={formData.name}
-                                name="name"
-                                id="name-input"
-                                onChange={handleInputChange}
-                                type="text" 
-                                className="form-control" 
-                                required
-                            />
-                        </div>
-                        {/* Email Input Field */}
-                        <div className="mb-3">
-                            <label htmlFor="email-input" className="form-label">Email Address</label>
-                            <input 
-                                value={formData.email}
-                                name="email"
-                                id="email-input"
-                                onChange={handleInputChange}
-                                type="email" 
-                                className="form-control" 
-                                required
-                            />
-                        </div>
-                        {/* Message Input Field */}
-                        <div className="mb-3">
-                            <label htmlFor="message-input" className="form-label">Message</label>
-                            <textarea 
-                                value={formData.message}
-                                name="message"
-                                id="message-input"
-                                onChange={handleInputChange}
-                                className="form-control" 
-                                rows={5}
-                                required
-                            />
-                        </div>
-                        {/* Success or Error Message */}
-                        {message && (
-                            <div
-                                className={`alert ${
-                                    message.type === 'success' ? 'alert-success' : 'alert-danger'
-                                }`}
-                                role="alert"
-                            >
-                                {message.text}
+            <section className='contact-methods-section'>
+                {/* Contact page opening message */}
+                <div className='contact-message'>
+                    <h2>Let's get in contact!</h2>
+                    <p>
+                        Say Hello and Let’s Create Something Amazing Together! 
+                        Whether it’s a quick question or a detailed project 
+                        discussion, I look forward to connecting with you.
+                    </p>
+                </div>
+                {/* Container for form and social links */}
+                <div className='row'>
+                    <div className='col-12 col-md-6'>
+                        <form className="contact-form" onSubmit={handleFormSubmit}>
+                                {/* Name Input Field */}
+                                <div className="input-group">
+                                    <label htmlFor="name-input" className="input-label">Name</label>
+                                    <input 
+                                        value={formData.name}
+                                        name="name"
+                                        id="name-input"
+                                        onChange={handleInputChange}
+                                        type="text" 
+                                        required
+                                    />
+                                </div>
+                                {/* Email Input Field */}
+                                <div className="input-group">
+                                    <label htmlFor="email-input" className="input-label">Email Address</label>
+                                    <input 
+                                        value={formData.email}
+                                        name="email"
+                                        id="email-input"
+                                        onChange={handleInputChange}
+                                        type="email" 
+                                        required
+                                    />
+                                </div>
+                                {/* Message Input Field */}
+                                <div className="input-group">
+                                    <label htmlFor="message-input" className="input-label">Message</label>
+                                    <textarea 
+                                        value={formData.message}
+                                        name="message"
+                                        id="message-input"
+                                        onChange={handleInputChange}
+                                        rows={5}
+                                        required
+                                    />
+                                </div>
+
+                                {/* Success or Error Message */}
+                                {message && (
+                                    <div
+                                        className={`alert ${
+                                            message.type === 'success' ? 'alert-success' : 'alert-danger'
+                                        }`}
+                                        role="alert"
+                                    >
+                                        {message.text}
+                                    </div>
+                                )}
+
+                                {/* Submit Button */}
+                                <div className="d-flex justify-content-center">
+                                    <button type="submit" className="submit-button">
+                                        Submit
+                                    </button>
+                                </div>
+                        </form>
+                    </div>
+
+                    <div className='col-12 col-md-6'>
+                        <div className='social-links'>
+                            <div className='social-link bottom-margin'>
+                                <button
+                                    className='social-button'
+                                    onClick={() => window.open('https://github.com/connorldailey', '_blank')}
+                                >
+                                    <i className='bi-github'></i>
+                                </button>
+                                <div className='social-label-container'>
+                                    <h4 className='social-label'>GitHub</h4>
+                                    <p className='social-at'>@connorldailey</p>
+                                </div>
                             </div>
-                        )}
-                        {/* Submit Button */}
-                        <div className="d-flex justify-content-center">
-                            <button type="submit" className="submit-button">
-                                Submit
-                            </button>
+                            <div className='social-link bottom-margin'>
+                                <button
+                                    className='social-button'
+                                    onClick={() => window.open('https://www.linkedin.com/in/connor-dailey-7a129b2b2/', '_blank')}
+                                >
+                                    <i className='bi-linkedin'></i>
+                                </button>
+                                <div className='social-label-container'>
+                                    <h4 className='social-label'>LinkedIn</h4>
+                                    <p>@connorldailey</p>
+                                </div>
+                            </div>
+                            <div className='social-link'>
+                                <button
+                                    className='social-button'
+                                    onClick={() => window.open('https://www.instagram.com/connorldailey', '_blank')}
+                                >
+                                    <i className='bi-instagram'></i>
+                                </button>
+                                <div className='social-label-container'>
+                                    <h4 className='social-label'>Instagram</h4>
+                                    <p className='social-at'>@connorldailey</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </form>
+
+                </div>
             </section>
         </>
     );
