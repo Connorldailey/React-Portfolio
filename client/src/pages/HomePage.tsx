@@ -72,12 +72,11 @@ const HomePage: React.FC = () => {
                     <div className='about-text'>
                         <div className="text-content">
                             <p>
-                                Based in Mount Vernon, OH, I’m a Full-Stack Web Developer who thrives on 
-                                turning complex problems into clean, user-focused solutions. Passionate about 
-                                both innovation and simplicity, I believe every challenge is an opportunity 
-                                to transform big ideas into elegant, minimalist applications. I’m committed 
-                                to continuous learning, always pushing to craft efficient code that proves—less 
-                                truly is more.
+                                Based in Mount Vernon, OH, I’m a <span className='text-highlight'>Full-Stack Web Developer</span> who 
+                                thrives on turning complex problems into clean, user-focused solutions. Passionate about both 
+                                innovation and simplicity, I believe every challenge is an opportunity to transform big ideas into 
+                                elegant, minimalist applications. I’m committed to continuous learning, always pushing to craft 
+                                efficient code that proves—<span className='text-highlight'>less truly is more</span>.
                             </p>
                         </div>
                         <div className="image-content">
@@ -109,7 +108,7 @@ const HomePage: React.FC = () => {
             <section className='contact-section'>
                 <p className='section-label'>Contact</p>
                 <p className='contact-section-text'>
-                    Ready to Collaborate? Drop me a message and let’s explore how 
+                    <span className='text-white'>Ready to Collaborate?</span> Drop me a message and let’s explore how 
                     we can turn your vision into reality.
                 </p>
                 <div className='contact-button'>

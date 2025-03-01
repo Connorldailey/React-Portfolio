@@ -6,11 +6,20 @@
 
 .custom-footer {
     border-top: 1px solid var(--text-gray);
+    margin: 0;
 }
   
 .footer-button {
     color: var(--text-gray);
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
     transition: transform 0.3s ease,  color 0.3s ease-in-out;
+}
+
+.padding-right {
+    padding-right: 2rem;
 }
   
 .footer-button:hover {
