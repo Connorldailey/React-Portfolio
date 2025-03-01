@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                     {socialLinks.map(({ label, icon, url }, index) => (
                         <button
                             key={index}
-                            className="btn btn-lg footer-button"
+                            className={`footer-button ${index !== socialLinks.length - 1 ? "padding-right" : ""}`}
                             onClick={() => window.open(url, '_blank')}
                             aria-label={`${label} Profile`}
                         >

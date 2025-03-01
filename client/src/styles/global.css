@@ -1,40 +1,63 @@
 :root {
-    --dark-background: black;
-    --text-gray: #6C757D;
-    --text-blue: #2DE1FC;
-    --text-yellow: #F6BD60;
-    --text-purple: #5D2E8C;
-    --text-red: #A22522;
-    --text-green: #33CA7F;
+  --dark-background: black;
+  --text-gray: #7A8086;
+  --text-light: #E9ECEF;
+  --text-blue: #2DE1FC;
+  --text-yellow: #F6BD60;
+  --text-purple: #5D2E8C;
+  --text-red: #A22522;
+  --text-green: #33CA7F;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  list-style-type: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* 
+  ----------------------------------
+  STYLES FOR THE MAIN CONTENT
+  ----------------------------------
+*/
+
+.main-background {
+  background: var(--dark-background);
+  min-height: 100vh;
+}
+
+.custom-page-margin {
+  margin: 0 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .custom-page-margin {
+    margin: 0 1rem;
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    position: relative;
-    list-style-type: none;
+}
+
+@media screen and (min-width: 678px) {
+  .custom-page-margin {
+    margin: 0 1.5rem;
   }
-  
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+}
+
+@media screen and (min-width: 1028px) {
+  .custom-page-margin {
+    margin: 0 2rem;
   }
-  
-  h1 {
-    font-size: 1.8rem;
-    margin: 0;
-  }
-  
-  /* 
-    ----------------------------------
-    STYLES FOR THE MAIN CONTENT
-    ----------------------------------
-  */
-  
-  .main-background {
-    background: var(--dark-background);
-    min-height: 100vh;
-  }
+}

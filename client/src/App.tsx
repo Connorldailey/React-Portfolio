@@ -23,7 +23,7 @@ const App: React.FC = () => {
     <ApolloProvider client={client}>
       <NavigationProvider>
         <div className="main-background flex-grow-1">
-          <div className="d-flex flex-column min-vh-100 mx-lg-5 mx-md-4 mx-3">
+          <div className="d-flex flex-column min-vh-100 custom-page-margin">
             <Header />
             <main className="flex-grow-1">
               <MainContent />

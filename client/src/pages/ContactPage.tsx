@@ -53,17 +53,17 @@ const ContactPage: React.FC = () => {
             <section className='contact-methods-section'>
                 {/* Contact page opening message */}
                 <div className='contact-message'>
-                    <h2>Let's get in contact!</h2>
-                    <p>
-                        Say Hello and Let’s Create Something Amazing Together! 
+                    <h2 className='contact-heading'>Let's get in contact!</h2>
+                    <p className='contact-intro-text'>
+                        Say hello and let’s create something amazing together! 
                         Whether it’s a quick question or a detailed project 
                         discussion, I look forward to connecting with you.
                     </p>
                 </div>
                 {/* Container for form and social links */}
                 <div className='row'>
-                    <div className='col-12 col-md-6'>
-                        <form className="contact-form" onSubmit={handleFormSubmit}>
+                    <div className='col-12 col-lg-6'>
+                        <form onSubmit={handleFormSubmit}>
                                 {/* Name Input Field */}
                                 <div className="input-group">
                                     <label htmlFor="name-input" className="input-label">Name</label>
