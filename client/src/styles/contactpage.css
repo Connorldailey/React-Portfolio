@@ -81,21 +81,59 @@ input:focus, textarea:focus {
         inset 0 0 0 2px var(--text-blue);
 }
 
-.submit-button {
-    border-radius: 8px;
-    border: 1px solid var(--text-gray);
-    width: 100px;
-    padding: 10px;
-    background-color: black;
-    color: var(--text-gray);
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.submit-button:hover {
-    border-color: white;
+.input-group:focus-within .input-label {
     color: white;
 }
 
+.submit-button {
+    border: 1px solid var(--text-gray);
+    width: 100%;
+    padding: 15px;
+    margin-top: 0.5rem;
+    background-color: black;
+    color: var(--text-gray);
+    transition: background-color 0.5s ease, color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-message-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.message-success {
+    border: 1px solid var(--text-green);
+    background-color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.message-error {
+    border: 1px solid var(--text-red);
+    background-color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 678px) {
+    .message-success, .message-error  {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+}
 
 
 /* Social Link Styles */
@@ -164,7 +202,7 @@ input:focus, textarea:focus {
 }
 
 .social-button:hover + .social-label-container .social-label {
-    color: white;
+    color: var(--text-blue);
     transition: color 0.3s ease-in-out;
 }
 

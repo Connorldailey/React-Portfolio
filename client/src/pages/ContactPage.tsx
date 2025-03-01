@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
     });
 
     // State variable to manage success and error messages
-    const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+    const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
     const [createContact] = useMutation(CREATE_CONTACT);
 
@@ -34,11 +34,14 @@ const ContactPage: React.FC = () => {
                 variables: { ...formData },
             });
             // Show success message
-            setMessage({ type: 'success', text: 'Form submission successful. Thanks for reaching out!' });
+            setMessage({ type: 'success', text: 'Message reveived. Thanks for reaching out!' });
+            setTimeout(() => {
+                setMessage(null);
+            }, 3000);
         } catch (error) {
             console.error(error);
             // Show error message
-            setMessage({ type: 'error', text: 'Could not submit contact information. Please try again later.' });
+            setMessage({ type: 'error', text: 'Whoops, we hit a snag. Please try again later.' });
         }
 
         setFormData({
@@ -53,11 +56,11 @@ const ContactPage: React.FC = () => {
             <section className='contact-methods-section'>
                 {/* Contact page opening message */}
                 <div className='contact-message'>
-                    <h2 className='contact-heading'>Let's get in contact!</h2>
+                    <h2 className='contact-heading'>Let's get in <span className='text-green'>contact</span></h2>
                     <p className='contact-intro-text'>
-                        Say hello and let’s create something amazing together! 
+                         <span className='text-highlight'>Say hello</span> and let’s create something amazing together! 
                         Whether it’s a quick question or a detailed project 
-                        discussion, I look forward to connecting with you.
+                        discussion, <span className='text-highlight'>I look forward to connecting with you.</span>
                     </p>
                 </div>
                 {/* Container for form and social links */}
@@ -100,19 +103,7 @@ const ContactPage: React.FC = () => {
                                         required
                                     />
                                 </div>
-
-                                {/* Success or Error Message */}
-                                {message && (
-                                    <div
-                                        className={`alert ${
-                                            message.type === 'success' ? 'alert-success' : 'alert-danger'
-                                        }`}
-                                        role="alert"
-                                    >
-                                        {message.text}
-                                    </div>
-                                )}
-
+                                
                                 {/* Submit Button */}
                                 <div className="d-flex justify-content-center">
                                     <button type="submit" className="submit-button">
@@ -163,6 +154,27 @@ const ContactPage: React.FC = () => {
                         </div>
                     </div>
 
+                </div>
+
+                {/* Success or Error Message */}
+                <div className='form-message-container'>
+                    {message && message.type === 'success' ? (
+                        <div
+                            className='message-success'
+                            role="alert"
+                        >
+                            <span className='text-green'>{`${message.text.split('.')[0]}. `}</span>
+                            <span>{message.text.split('.')[1]}</span>
+                        </div>
+                    ) : message && (
+                        <div
+                            className='message-error'
+                            role="alert"
+                        >
+                            <span className='text-red'>{`${message.text.split('.')[0]}. `}</span>
+                            <span>{message.text.split('.')[1]}</span>
+                        </div>
+                    )}
                 </div>
             </section>
         </>

@@ -7,6 +7,7 @@
 
 .section-label {
     position: relative;
+    right: 0.9rem;
     top: -0.8rem;
     color: var(--text-light);
 }
@@ -21,7 +22,7 @@
 .intro-section::after {
     content: "";
     position: absolute;
-    left: 85px;
+    left: 70px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);
@@ -181,7 +182,7 @@
 .project-carousel-section::after {
     content: "";
     position: absolute;
-    left: 95px;
+    left: 82px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);
@@ -204,7 +205,7 @@
 .about-section::after {
     content: "";
     position: absolute;
-    left: 85px;
+    left: 70px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);

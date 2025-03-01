@@ -3,7 +3,7 @@
   --text-gray: #7A8086;
   --text-light: #E9ECEF;
   --text-blue: #2DE1FC;
-  --text-yellow: #F6BD60;
+  --text-yellow: #FFD817;
   --text-purple: #5D2E8C;
   --text-red: #A22522;
   --text-green: #33CA7F;
@@ -29,6 +29,26 @@ h1 {
   margin: 0;
 }
 
+.text-blue {
+  color: var(--text-blue);
+}
+
+.text-yellow {
+  color: var(--text-yellow);
+}
+
+.text-green {
+  color: var(--text-green);
+}
+
+.text-red {
+  color: var(--text-red);
+}
+
+.text-highlight {
+  color: var(--text-light);
+}
+
 /* 
   ----------------------------------
   STYLES FOR THE MAIN CONTENT
@@ -46,18 +66,30 @@ h1 {
 
 @media screen and (min-width: 576px) {
   .custom-page-margin {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
 }
 
 @media screen and (min-width: 678px) {
   .custom-page-margin {
-    margin: 0 1.5rem;
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 976px) {
+  .custom-page-margin {
+    margin: 0 3rem;
   }
 }
 
 @media screen and (min-width: 1028px) {
   .custom-page-margin {
-    margin: 0 2rem;
+    margin: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .custom-page-margin {
+    margin: 0 5rem;
   }
 }
