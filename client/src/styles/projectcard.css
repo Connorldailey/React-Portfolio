@@ -4,12 +4,6 @@
   ------------------------------
 */
 
-/* Projects Section */
-.projects-section {
-    padding: 2rem 1rem;
-    margin: 0 auto;
-}
-
 /* Project Card Styles */
 .project-card {
     border: 1px solid var(--text-gray);
@@ -17,6 +11,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
 }
 
 .project-card:hover {

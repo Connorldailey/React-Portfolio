@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, image, description, github
                 </div>
             </div>
             <div className="p-3">
-                <img src={image} alt={title} className="img-fluid project-image" loading="lazy" />
+                <img src={image} alt={title} className="project-image" loading="lazy" />
                 <p className="mt-3 card-text">{description}</p>
             </div>
         </div>

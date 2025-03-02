@@ -26,6 +26,7 @@ const AboutPage: React.FC = () => {
             
             {/* About Info Section */}
             <section className='about-info-section'>
+                <p className='section-label'>About Me</p>
                 <div className='about-info-content'>
                     <div className='about-info-text'>
                         <div className="about-text-content">
@@ -53,7 +54,7 @@ const AboutPage: React.FC = () => {
 
             {/* Core Skills Section */}
             <section className='core-skills-section'>
-                <h2>Core Skills</h2>
+                <p className='section-label'>Core Skills</p>
                 <div className="core-skills-content">
                     {/* Map over skills array to display each skill */}
                     {skillList.map((skill, index) => (
@@ -69,7 +70,7 @@ const AboutPage: React.FC = () => {
 
             {/* Hobbies and Interests Section */}
             <section className="hobbies-interests-section">
-                <h3>Hobbies and Interests</h3>
+                <p className='section-label'>Hobbies and Interests</p>
                 <div className='hobbies-interests-content'>
                     <p>
                         Outside of coding, I have a variety of interests that keep me grounded and inspired. 
@@ -89,10 +90,10 @@ const AboutPage: React.FC = () => {
 
             {/* Call to Action Section */}
             <section className="cta-section">
-                <h3>Call to Action</h3>
-                <div>
+                <p className='section-label'>Call to Action</p>
+                <div className="cta-content">
                     <p>
-                        <strong>Looking to Collaborate? </strong>
+                        <strong className='text-light'>Looking to Collaborate? </strong>
                         I’m always excited about potential collaborations and new opportunities to contribute to impactful projects. 
                         If you’re interested in working together, let’s connect! For inquiries, feedback, or just to say hello, 
                         feel free to reach out through my <Link to="/contact">Contact</Link> page. I’d love to hear from you!

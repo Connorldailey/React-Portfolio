@@ -9,7 +9,7 @@
 .about-intro-section::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 75px;
   right: 0;
   bottom: 0;
   border-bottom: 1px solid var(--text-gray);
@@ -69,32 +69,67 @@
 .about-info-section::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 85px;
   right: 0;
   bottom: 0;
   border-bottom: 1px solid var(--text-gray);
 }
 
 .about-info-content {
-  padding: 0rem 1rem;
+  padding: 0rem 1rem 2.5rem;
   margin: 0 auto;
 }
 
+.about-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-text-content {
+  color: var(--text-gray);
+  text-align: start;
+}
+
+@media screen and (min-width: 768px) {
+  .about-info-content {
+    padding: 0.5rem 1rem 2.5rem;
+    margin: 0 auto;
+  }
+  .about-info-text {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .about-text-content {
+    flex: 1;
+    text-align: left;
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-text-content {
+    font-size: 150%;
+    padding-right: 5rem;
+  }
+}
 
 
 /* Core Skills Section */
 .core-skills-section::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 165px;
   right: 0;
   bottom: 0;
   border-bottom: 1px solid var(--text-gray);
 }
 
 .core-skills-content {
-  padding: 0rem 1rem;
-  margin: 0 auto;
+  padding: 1rem 1rem 2.5rem;
+  position: relative;
 }
 
 
@@ -103,13 +138,22 @@
 .hobbies-interests-section::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 105px;
   right: 0;
   bottom: 0;
   border-bottom: 1px solid var(--text-gray);
 }
 
 .hobbies-interests-content {
-  padding: 0rem 1rem;
-  margin: 0 auto;
+  padding: 1.2rem 1rem 2rem;
+  color: var(--text-gray);
+}
+
+
+
+/* CTA Section */
+
+.cta-content {
+  padding: 1.2rem 1rem 2rem;
+  color: var(--text-gray);
 }
