@@ -7,9 +7,10 @@
 
 .section-label {
     position: relative;
-    right: 0.9rem;
+    right: 0rem;
     top: -0.8rem;
     color: var(--text-light);
+    margin: 0;
 }
 
 /* 
@@ -22,7 +23,7 @@
 .intro-section::after {
     content: "";
     position: absolute;
-    left: 70px;
+    left: 85px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);
@@ -182,7 +183,7 @@
 .project-carousel-section::after {
     content: "";
     position: absolute;
-    left: 82px;
+    left: 95px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);
@@ -205,7 +206,7 @@
 .about-section::after {
     content: "";
     position: absolute;
-    left: 70px;
+    left: 85px;
     right: 0;
     bottom: 0;
     border-bottom: 1px solid var(--text-gray);
