@@ -10,7 +10,7 @@ interface SkillProps {
 
 const SkillCard: React.FC<SkillProps> = ({ title, icon, description }) => {
     return (
-        <div className="col mb-4">
+        <div className="col">
             {/* Card to display skill information */}
             <div className="card h-100 skills-card">
                 {/* Card body containing the skill content */}

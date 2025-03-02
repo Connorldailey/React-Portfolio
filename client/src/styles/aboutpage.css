@@ -1,21 +1,115 @@
 /* 
   ----------------------------------
   STYLES FOR THE ABOUT PAGE 
-  (General)
   ----------------------------------
 */
 
-.about-me-section,
-.core-skills-section,
-.hobbies-interests-section,
-.cta-section {
-    padding: 2rem 1rem;
-    margin: 0 auto;
-    color: var(--text-gray);
+/* Intro Section */
+
+.about-intro-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--text-gray);
 }
 
-.profile-image {
-  min-width: 150px;
-  height: 150px;
-  object-fit: cover;
+.about-intro-content {
+  padding: 2rem 1rem 0;
+  margin: 0 auto;
+  color: var(--text-gray);
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.about-intro-text {
+  font-size: 1.2rem;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-heading {
+      font-size: 3rem;
+  }
+  .about-intro-text {
+      font-size: 1.8rem;
+      padding: 3rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-heading {
+      font-size: 4rem;
+  }
+  .about-intro-text {
+      font-size: 2.2rem;
+      padding: 3rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .about-heading {
+      font-size: 4.5rem;
+  }
+  .about-intro-text {
+      font-size: 3rem;
+      padding: 8rem 7rem;
+  }
+}
+
+
+
+/* About Me (About Info) Section */
+
+.about-info-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.about-info-content {
+  padding: 0rem 1rem;
+  margin: 0 auto;
+}
+
+
+
+/* Core Skills Section */
+.core-skills-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.core-skills-content {
+  padding: 0rem 1rem;
+  margin: 0 auto;
+}
+
+
+
+/* Hobbies and Interests Section */
+.hobbies-interests-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.hobbies-interests-content {
+  padding: 0rem 1rem;
+  margin: 0 auto;
 }
