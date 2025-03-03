@@ -1,0 +1,217 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE CONTACT PAGE 
+  ----------------------------------
+*/
+
+.contact-methods-section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+.contact-heading {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contact-intro-text {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-heading {
+        font-size: 3rem;
+    }
+    .contact-intro-text {
+        font-size: 1.8rem;
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact-heading {
+        font-size: 4rem;
+    }
+    .contact-intro-text {
+        font-size: 2.2rem;
+        padding: 3rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .contact-heading {
+        font-size: 4.5rem;
+    }
+    .contact-intro-text {
+        font-size: 3rem;
+        padding: 8rem 7rem;
+    }
+}
+
+/* Form Styles */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    background-color: #1e1e1e;
+    border: 1px solid var(--text-gray);
+    color: #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.9),
+        inset 0 1px 3px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 1),
+        inset 0 0 0 2px var(--text-blue);
+}
+
+.input-group:focus-within .input-label {
+    color: white;
+}
+
+.submit-button {
+    border: 1px solid var(--text-gray);
+    width: 100%;
+    padding: 15px;
+    margin-top: 0.5rem;
+    background-color: black;
+    color: var(--text-gray);
+    transition: background-color 0.5s ease, color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-message-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.message-success {
+    border: 1px solid var(--text-green);
+    background-color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.message-error {
+    border: 1px solid var(--text-red);
+    background-color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 678px) {
+    .message-success, .message-error  {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+}
+
+
+/* Social Link Styles */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    margin: 4rem 0 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .social-links {
+        margin: 5rem 0 3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .social-links {
+        align-items: center;
+        justify-content: start;
+        margin: 2rem 0;
+    }
+    .row {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .row {
+        margin-bottom: 4rem;
+    }
+}
+
+.social-link {
+    display: flex;
+}
+
+.social-link.bottom-margin {
+    margin-bottom: 2rem;
+}
+
+.social-button {
+    width: 75px;
+    height: 75px;
+    margin-right: 1.5rem;
+    background-color: var(--dark-background);
+    color: white;
+    border: 1px solid var(--text-gray);
+    transition: background-color 0.3s ease-in-out, 
+        color 0.3s ease-in-out;
+}
+
+.social-button:hover {
+    background-color: white;
+    color: var(--dark-background);
+}
+
+.social-label-container {
+    transition: transform 0.3s ease;
+}
+
+.social-button:hover + .social-label-container {
+    transform: translateX(10px);
+}
+
+.social-button:hover + .social-label-container .social-label {
+    color: var(--text-blue);
+    transition: color 0.3s ease-in-out;
+}
+
+.social-label {
+    font-weight: 300;
+    margin: 0;
+}
+
+.social-at {
+    font-weight: 100;
+    margin: 0;
+}

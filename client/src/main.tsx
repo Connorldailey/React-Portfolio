@@ -2,16 +2,15 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './index.css';
+import './styles/global.css';
 
 // Bring in pages the router will use
 import App from './App';
-import AboutMe from './pages/AboutMe';
-import Contact from './pages/Contact';
-import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import Contact from './pages/ContactPage';
+import ProjectsPage from './pages/ProjectsPage';
 import ErrorPage from './pages/ErrorPage';
 
 // Define the accessible routes
@@ -23,19 +22,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <AboutMe />,
+        element: <HomePage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
+      },
+      {
+        path: 'projects',
+        element: <ProjectsPage />,
       },
       {
         path: 'contact',
         element: <Contact />,
-      },
-      {
-        path: 'portfolio',
-        element: <Portfolio />,
-      },
-      {
-        path: 'resume',
-        element: <Resume />,
       },
     ],
   },

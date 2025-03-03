@@ -1,0 +1,84 @@
+/* 
+  ----------------------------------
+  STYLES FOR THE PROJECTS PAGE 
+  ----------------------------------
+*/
+
+/* Intro Section */
+
+.projects-intro-section::after {
+  content: "";
+  position: absolute;
+  left: 95px;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--text-gray);
+}
+
+.projects-intro-content {
+  padding: 2rem 1rem 0;
+  margin: 0 auto;
+  color: var(--text-gray);
+}
+
+.projects-heading {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.projects-intro-text {
+  font-size: 1.2rem;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-heading {
+      font-size: 3rem;
+  }
+  .projects-intro-text {
+      font-size: 1.8rem;
+      padding: 3rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects-heading {
+      font-size: 4rem;
+  }
+  .projects-intro-text {
+      font-size: 2.2rem;
+      padding: 3rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .projects-heading {
+      font-size: 4.5rem;
+  }
+  .projects-intro-text {
+      font-size: 3rem;
+      padding: 8rem 7rem;
+  }
+}
+
+/* Projects content section */
+
+.projects-display-content {
+  padding: 1.2rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 678px) {
+  .projects-display-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-display-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
