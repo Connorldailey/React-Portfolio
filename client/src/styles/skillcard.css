@@ -8,30 +8,6 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: transform 0.25s ease-in-out;
-    position: sticky;
-}
-
-.skills-card:nth-child(1n) {
-    top: 6rem;
-    z-index: 1;
-}
-
-.skills-card:nth-child(2n) {
-    top: 9rem;
-    margin-top: 2rem;
-    z-index: 2;
-}
-
-.skills-card:nth-child(3n) {
-    top: 12rem;
-    margin-top: 2rem;
-    z-index: 3;
-}
-
-.skills-card:nth-child(4n) {
-    top: 15rem;
-    margin-top: 2rem;
-    z-index: 4;
 }
 
 .icon-container {
@@ -52,7 +28,7 @@
     color: var(--text-gray);
     background-color: var(--dark-background);
     transform: scale(1.03);
-    z-index: 1;
+    z-index: 10;
 }
 
 .skills-card:hover .skill-card-title {
