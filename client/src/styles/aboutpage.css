@@ -129,7 +129,15 @@
 
 .core-skills-content {
   padding: 1rem 1rem 2.5rem;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .core-skills-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -149,6 +157,18 @@
   color: var(--text-gray);
 }
 
+@media screen and (min-width: 768px) {
+  .hobbies-interests-content {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hobbies-interests-content {
+    font-size: 150%;
+  }
+}
+
 
 
 /* CTA Section */
@@ -156,4 +176,16 @@
 .cta-content {
   padding: 1.2rem 1rem 2rem;
   color: var(--text-gray);
+}
+
+@media screen and (min-width: 768px) {
+  .cta-content {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-content {
+    font-size: 150%;
+  }
 }
