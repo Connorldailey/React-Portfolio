@@ -136,7 +136,7 @@ const ContactPage: React.FC = () => {
                                 </button>
                                 <div className='social-label-container'>
                                     <h4 className='social-label'>LinkedIn</h4>
-                                    <p>@connorldailey</p>
+                                    <p className='social-at'>@connorldailey</p>
                                 </div>
                             </div>
                             <div className='social-link'>

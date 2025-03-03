@@ -141,9 +141,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         ) : (
             <>
                 {projects.map((project, index) => (
-                    <div className={index !== projects.length - 1 ? 'project-card-item' : ''}>
+                    <div key={index} className={index !== projects.length - 1 ? 'project-card-item' : ''}>
                         <ProjectCard
-                            key={index}
                             title={project.title}
                             image={project.image}
                             description={project.description}
