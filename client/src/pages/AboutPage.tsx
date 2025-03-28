@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
                 <div className='about-intro-content'>
                     <h2 className="about-heading">Get to know <span className='text-green'>me</span></h2>
                     <p className="about-intro-text">
-                        Welcome! I’m <span className='text-light'>Connor Dailey</span>, and I build digital 
+                        Welcome! I'm <span className='text-light'>Connor Dailey</span>, and I build digital 
                         experiences that make complex ideas simple. Armed with a degree in Mathematics and 
                         specialized web development training, I thrive on crafting both elegant 
                         <span className='text-light'> front-end interfaces</span> and robust 
@@ -31,14 +31,14 @@ const AboutPage: React.FC = () => {
                     <div className='about-info-text'>
                         <div className="about-text-content">
                             <p>
-                                I’m Connor Dailey, a Full-Stack Web Developer with a Bachelor’s in Mathematics 
+                                I'm Connor Dailey, a Full-Stack Web Developer with a Bachelor's in Mathematics 
                                 and a certificate in Full Stack Web Development from The Ohio State University. I love tackling complex challenges by 
-                                building practical, user-focused solutions with HTML, CSS, JavaScript, React, Node.js, and TypeScript. Whether it’s 
-                                optimizing a front-end interface or crafting a robust back-end, I’m driven by continuous learning and the thrill of 
+                                building practical, user-focused solutions with Typescript, React, and Node.js. Whether it's 
+                                creating a stunning front-end interface or crafting a robust back-end, I'm driven by continuous learning and the thrill of 
                                 transforming big ideas into impactful applications.
                             </p>
                             <p>
-                                Ready to build something extraordinary together? Let’s connect and create innovative products that move businesses—and the world—forward.
+                                Ready to build something extraordinary together? Let's connect and create innovative products that move businesses—and the world—forward.
                             </p>
                         </div>
                         <div className="image-content">
@@ -72,19 +72,42 @@ const AboutPage: React.FC = () => {
             <section className="hobbies-interests-section">
                 <p className='section-label'>Hobbies and Interests</p>
                 <div className='hobbies-interests-content'>
-                    <p>
-                        Outside of coding, I have a variety of interests that keep me grounded and inspired. 
-                        I enjoy playing guitar, whether I'm learning a new song or just unwinding with a few chords. 
-                        Archery is another passion of mine—it’s a practice that combines focus, patience, and precision, 
-                        qualities I bring into my work as well.
-                    </p>
-                    <p>
-                        I'm an avid nature explorer who loves immersing myself in the beauty of the outdoors—whether it's hiking, 
-                        kayaking, or fishing, I’m always ready for the next adventure.
-                        At home, I’m dedicated to caring for my growing collection of potted plants, which adds a bit of nature 
-                        to my everyday environment. Most importantly, I cherish quality time with friends and family, as they 
-                        keep me balanced and remind me of what truly matters.
-                    </p>
+                    <div className="hobby-item">
+                        <div className="hobby-icon">
+                            <i className="bi bi-music-note-beamed"></i>
+                        </div>
+                        <div className="hobby-text">
+                            <h3>Music</h3>
+                            <p>Playing guitar, whether I'm learning a new song or just unwinding with a few chords.</p>
+                        </div>
+                    </div>
+                    <div className="hobby-item">
+                        <div className="hobby-icon">
+                            <i className="bi bi-bullseye"></i>
+                        </div>
+                        <div className="hobby-text">
+                            <h3>Archery</h3>
+                            <p>A practice that combines focus, patience, and precision—qualities I bring into my work.</p>
+                        </div>
+                    </div>
+                    <div className="hobby-item">
+                        <div className="hobby-icon">
+                            <i className="bi bi-tree"></i>
+                        </div>
+                        <div className="hobby-text">
+                            <h3>Nature Exploration</h3>
+                            <p>Hiking, kayaking, and fishing adventures that keep me connected to the outdoors.</p>
+                        </div>
+                    </div>
+                    <div className="hobby-item">
+                        <div className="hobby-icon">
+                            <i className="bi bi-flower1"></i>
+                        </div>
+                        <div className="hobby-text">
+                            <h3>Plant Care</h3>
+                            <p>Cultivating a collection of potted plants that bring nature into my everyday environment.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -94,9 +117,9 @@ const AboutPage: React.FC = () => {
                 <div className="cta-content">
                     <p>
                         <strong className='text-light'>Looking to Collaborate? </strong>
-                        I’m always excited about potential collaborations and new opportunities to contribute to impactful projects. 
-                        If you’re interested in working together, let’s connect! For inquiries, feedback, or just to say hello, 
-                        feel free to reach out through my <Link to="/contact">Contact</Link> page. I’d love to hear from you!
+                        I'm always excited about potential collaborations and new opportunities to contribute to impactful projects. 
+                        If you're interested in working together, let's connect! For inquiries, feedback, or just to say hello, 
+                        feel free to reach out through my <Link to="/contact">Contact</Link> page. I'd love to hear from you!
                     </p>
                 </div>
             </section>
