@@ -39,6 +39,7 @@ const Header: React.FC = () => {
                         className={({ isActive }) =>
                             `navbar-brand ${isActive ? 'active-brand' : 'inactive-brand'}`
                         }
+                        onClick={handleLinkClick}
                     >
                         Connor Dailey
                     </NavLink>
