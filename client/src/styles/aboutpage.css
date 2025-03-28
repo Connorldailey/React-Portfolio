@@ -143,6 +143,7 @@
 
 
 /* Hobbies and Interests Section */
+
 .hobbies-interests-section::after {
   content: "";
   position: absolute;
@@ -153,19 +154,113 @@
 }
 
 .hobbies-interests-content {
-  padding: 1.2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hobby-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #000000, #19191a);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobby-item:last-child {
+  margin-bottom: 2rem;
+}
+
+.hobby-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--text-green);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hobby-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(42, 42, 42, 0.8));
+}
+
+.hobby-item:hover::before {
+  opacity: 1;
+}
+
+.hobby-icon {
+  font-size: 2rem;
   color: var(--text-gray);
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
+  text-align: center;
+}
+
+.hobby-item:hover .hobby-icon {
+  color: var(--text-yellow);
+  transform: scale(1.1);
+}
+
+.hobby-text {
+  flex: 1;
+}
+
+.hobby-text h3 {
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.hobby-text p {
+  color: var(--text-gray);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .hobbies-interests-content {
-    font-size: 120%;
+    padding: 2rem 2rem;
+  }
+  
+  .hobby-item {
+    padding: 2rem;
+  }
+  
+  .hobby-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .hobby-text p {
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hobbies-interests-content {
-    font-size: 150%;
+    padding: 2rem 3rem;
+  }
+  
+  .hobby-item {
+    padding: 2.5rem;
+  }
+  
+  .hobby-text h3 {
+    font-size: 1.8rem;
+  }
+  
+  .hobby-text p {
+    font-size: 1.2rem;
   }
 }
 
